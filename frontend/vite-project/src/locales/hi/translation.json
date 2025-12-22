@@ -1,0 +1,555 @@
+{
+  "brand": "वाइटल्सहब",
+  "brandPharmacy": "वाइटल्सहब - फार्मेसी",
+  "loading": "लोड हो रहा है...",
+  "nav": {
+    "home": "होम",
+    "quickAsk": "त्वरित पूछें",
+    "appointments": "मेरी अपॉइंटमेंट्स",
+    "medicalRecords": "मेडिकल रिकॉर्ड्स",
+    "pharmacy": "दवाइयाँ और फार्मेसी",
+    "myProfile": "मेरा प्रोफ़ाइल",
+    "logout": "लॉगआउट"
+  },
+  "chatbot": {
+    "initialMessage": "नमस्ते! मैं आपका स्वास्थ्य सहायक हूँ। मैं आपको डॉक्टर खोजने, अपॉइंटमेंट देखने या स्वास्थ्य और दवाइयों से जुड़े प्रश्नों के उत्तर देने में मदद कर सकता/सकती हूँ।",
+    "headerTitle": "अपनी स्वास्थ्य संबंधी पूछताछ यहाँ पूछें",
+    "sessionId": "सेशन आईडी",
+    "inputPlaceholder": "अस्पताल के समय, डॉक्टर या दवाइयों के बारे में पूछें...",
+    "sending": "भेजा जा रहा है...",
+    "send": "भेजें",
+    "thinking": "सोच रहा/रही है..."
+  },
+  "hospitals": {
+    "loading": "अस्पताल लोड हो रहे हैं...",
+    "emptyTitle": "कोई अस्पताल नहीं मिला",
+    "emptySubtitle": "हमारे नेटवर्क में वर्तमान में कोई अस्पताल उपलब्ध नहीं है।",
+    "tryAgain": "पुनः प्रयास करें",
+    "headerTitle": "उपलब्ध अस्पताल",
+    "headerSubtitle": "उपलब्ध डॉक्टरों को देखने और अपॉइंटमेंट बुक करने के लिए नीचे एक अस्पताल चुनें।",
+    "stats": {
+      "hospitalsAvailable": "उपलब्ध अस्पताल",
+      "emergencyCare": "आपातकालीन सेवा",
+      "expertDoctors": "विशेषज्ञ डॉक्टर"
+    },
+    "networkTitle": "अस्पताल नेटवर्क",
+    "tags": {
+      "emergencyCare": "आपातकालीन सेवा",
+      "surgery": "सर्जरी",
+      "diagnostics": "डायग्नॉस्टिक्स"
+    },
+    "actions": {
+      "viewDoctors": "डॉक्टर देखें"
+    },
+    "availableNow": "अभी उपलब्ध",
+    "quickBooking": "त्वरित बुकिंग ⚡",
+    "summary": "अपॉइंटमेंट के लिए {{count}} अस्पताल{{plural}} उपलब्ध हैं"
+  },
+  "addDocs": {
+    "title": "मेरे दस्तावेज़",
+    "subtitle": "अपने चिकित्सा दस्तावेज़ों को आसानी और सुरक्षा के साथ प्रबंधित करें।",
+    "dragDrop": "यहाँ फ़ाइलें खींचकर छोड़ें",
+    "browse": "या ब्राउज़ करने के लिए क्लिक करें",
+    "form": {
+      "titlePlaceholder": "शीर्षक दर्ज करें"
+    },
+    "buttons": {
+      "uploading": "अपलोड हो रहा है...",
+      "upload": "दस्तावेज़ अपलोड करें",
+      "view": "देखें",
+      "download": "डाउनलोड",
+      "delete": "हटाएँ"
+    },
+    "uploadedTitle": "अपलोड किए गए दस्तावेज़",
+    "table": {
+      "name": "दस्तावेज़ का नाम",
+      "date": "अपलोड तिथि",
+      "type": "फ़ाइल प्रकार",
+      "actions": "कार्य"
+    },
+    "fileTypes": {
+      "pdf": "पीडीएफ",
+      "image": "छवि"
+    },
+    "empty": "अभी तक कोई फ़ाइल अपलोड नहीं की गई",
+    "toasts": {
+      "fetchError": "दस्तावेज़ लाने में त्रुटि",
+      "deleteSuccess": "दस्तावेज़ सफलतापूर्वक हटाया गया",
+      "deleteError": "दस्तावेज़ हटाने में त्रुटि",
+      "requiredFields": "सभी फ़ील्ड आवश्यक हैं"
+    }
+  },
+  "pharmacies": {
+    "title": "सभी फार्मेसियाँ",
+    "subtitle": "अपने नज़दीकी फार्मेसी में दवाइयाँ खोजें",
+    "searchPlaceholder": "फार्मेसी खोजें...",
+    "search": "खोजें",
+    "viewMedicines": "दवाइयाँ देखें",
+    "errors": {
+      "loadFailed": "फार्मेसियाँ लोड करने में असफल। कृपया बाद में पुनः प्रयास करें।",
+      "searchFailed": "फार्मेसी खोजने में असफल। कृपया पुनः प्रयास करें।"
+    }
+  },
+  "pharmacy": {
+    "backToPharmacies": "फार्मेसियों पर वापस जाएँ",
+    "availableMedicines": "उपलब्ध दवाइयाँ",
+    "searchPlaceholder": "दवाइयाँ खोजें...",
+    "noMedicines": "कोई दवाइयाँ नहीं मिलीं",
+    "tryAdjust": "कृपया अपने खोज शब्द बदलकर देखें",
+    "stock": "स्टॉक: {{count}} यूनिट्स",
+    "viewDetails": "विवरण देखें",
+    "errors": {
+      "loadFailed": "फार्मेसी विवरण लोड करने में असफल। कृपया बाद में पुनः प्रयास करें।"
+    }
+  },
+  "language": {
+    "label": "भाषा",
+    "en": "अंग्रेज़ी",
+    "hi": "हिन्दी",
+    "pa": "पंजाबी",
+    "te": "तेलुगू"
+  },
+  "admin": {
+    "allDoctors": "सभी डॉक्टर"
+  },
+  "homepage": {
+    "welcomeBack": "वापसी पर स्वागत है!",
+    "welcomeBackName": "वापसी पर स्वागत है, {{name}}!",
+    "summary": "यहाँ आपकी हाल की गतिविधियों का सारांश और सामान्य कार्यों के लिए त्वरित पहुँच है।",
+    "quickActions": "त्वरित कार्य",
+    "scheduleAppointment": {
+      "title": "अपॉइंटमेंट शेड्यूल करें",
+      "subtitle": "डॉक्टर के साथ परामर्श बुक करें"
+    },
+    "medicalRecords": {
+      "title": "मेडिकल रिकॉर्ड्स",
+      "subtitle": "अपने स्वास्थ्य दस्तावेज़ देखें"
+    },
+    "recentActivity": "हाल की गतिविधि",
+    "upcomingAppointment": "आगामी अपॉइंटमेंट",
+    "appointmentWith": "{{doctor}} के साथ अपॉइंटमेंट",
+    "recentMedicalRecords": "हाल के मेडिकल रिकॉर्ड्स",
+    "checkupResults": "{{monthYear}} के चेकअप परिणाम",
+    "addDocuments": "दस्तावेज़ जोड़ें"
+  },
+  "login": {
+    "title": "लॉगिन",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "loggingIn": "लॉगिन हो रहा है...",
+    "login": "लॉगिन",
+    "noAccount": "क्या आपका खाता नहीं है?",
+    "signUp": "साइन अप"
+  },
+  "signup": {
+    "title": "साइन अप",
+    "fullName": "पूरा नाम",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "phoneNumber": "फ़ोन नंबर",
+    "dateOfBirth": "जन्म तिथि",
+    "signingUp": "साइन अप हो रहा है...",
+    "signUp": "साइन अप",
+    "haveAccount": "क्या आपका पहले से खाता है?",
+    "login": "लॉगिन",
+    "errors": {
+      "required": "सभी फ़ील्ड आवश्यक हैं",
+      "passwordLength": "पासवर्ड कम से कम 6 अक्षरों का होना चाहिए",
+      "phoneLength": "फ़ोन नंबर 10 अंकों का होना चाहिए",
+      "invalidEmail": "अमान्य ईमेल प्रारूप"
+    }
+  },
+  "singleLogin": {
+    "header": {
+      "title": "{{brand}} में आपका स्वागत है",
+      "subtitle": "अपना लॉगिन प्रकार चुनें और क्रेडेंशियल दर्ज करें"
+    },
+    "chooseType": "लॉगिन प्रकार चुनें",
+    "types": {
+      "user": {
+        "title": "रोगी लॉगिन",
+        "description": "अपने मेडिकल रिकॉर्ड देखें और अपॉइंटमेंट बुक करें"
+      },
+      "admin": {
+        "title": "एडमिन लॉगिन",
+        "description": "अस्पतालों, डॉक्टरों और सिस्टम संचालन का प्रबंधन करें"
+      },
+      "pharmacy": {
+        "title": "फार्मेसी लॉगिन",
+        "description": "प्रिस्क्रिप्शन और इन्वेंटरी का प्रबंधन करें"
+      }
+    },
+    "links": {
+      "forgotPassword": "पासवर्ड भूल गए?",
+      "needHelp": "मदद चाहिए?"
+    }
+  },
+  "profile": {
+    "title": "मेरा प्रोफ़ाइल",
+    "fullName": "पूरा नाम",
+    "email": "ईमेल पता",
+    "phoneNumber": "फ़ोन नंबर",
+    "dateOfBirth": "जन्म तिथि",
+    "saveChanges": "परिवर्तन सहेजें"
+  },
+  "specialisations": {
+    "Cardiologist": "हृदय रोग विशेषज्ञ",
+    "Dermatologist": "त्वचा रोग विशेषज्ञ",
+    "Neurologist": "तंत्रिका रोग विशेषज्ञ",
+    "Orthopedic": "अस्थि रोग विशेषज्ञ",
+    "Pediatrician": "बाल रोग विशेषज्ञ",
+    "General Physician": "सामान्य चिकित्सक",
+    "ENT": "कान, नाक और गला विशेषज्ञ",
+    "Ophthalmologist": "नेत्र रोग विशेषज्ञ",
+    "Oncologist": "कैंसर रोग विशेषज्ञ",
+    "Gynecologist": "स्त्री रोग विशेषज्ञ",
+    "Dentist": "दंत चिकित्सक",
+    "Psychiatrist": "मनोचिकित्सक",
+    "Radiologist": "रेडियोनिदान विशेषज्ञ"
+  },
+  "medicalRecords": {
+    "title": "मेडिकल रिकॉर्ड्स",
+    "table": {
+      "title": "शीर्षक",
+      "dateUploaded": "अपलोड की तारीख",
+      "type": "प्रकार",
+      "actions": "कार्य"
+    },
+    "empty": "कोई मेडिकल रिकॉर्ड नहीं मिला।",
+    "type": {
+      "pdf": "पीडीएफ",
+      "image": "छवि"
+    },
+    "actions": {
+      "view": "देखें",
+      "download": "डाउनलोड"
+    }
+  },
+  "appointments": {
+    "title": "मेरी अपॉइंटमेंट्स",
+    "timeLabel": "समय:",
+    "statusLabel": "स्थिति:",
+    "status": {
+      "Confirmed": "स्वीकृत",
+      "Pending": "लंबित",
+      "Cancelled": "रद्द"
+    },
+    "empty": "कोई अपॉइंटमेंट नहीं मिली।"
+  },
+  "createAppointment": {
+    "back": "← डॉक्टरों पर वापस जाएँ",
+    "title": "अपॉइंटमेंट बुक करें",
+    "subtitle": "अपनी अपॉइंटमेंट बुक करने के लिए विवरण भरें",
+    "selectedHospital": "चयनित अस्पताल",
+    "selectedDoctor": "चयनित डॉक्टर",
+    "errors": {
+      "notSelected": "कृपया पहले एक डॉक्टर चुनें",
+      "required": "सभी फ़ील्ड आवश्यक हैं",
+      "failed": "अपॉइंटमेंट बुकिंग विफल रही। कृपया पुनः प्रयास करें।",
+      "unexpected": "कोई अप्रत्याशित त्रुटि हुई"
+    },
+    "form": {
+      "appointmentDateTime": "अपॉइंटमेंट की तारीख और समय *",
+      "descriptionLabel": "विवरण / लक्षण *",
+      "descriptionPlaceholder": "अपने लक्षण या अपॉइंटमेंट का कारण लिखें...",
+      "emergencyLabel": "यह एक आपातकालीन अपॉइंटमेंट है"
+    },
+    "buttons": {
+      "cancel": "रद्द करें",
+      "booking": "बुकिंग हो रही है...",
+      "bookAppointment": "अपॉइंटमेंट बुक करें"
+    },
+    "toast": {
+      "title": "अपॉइंटमेंट की पुष्टि ✅",
+      "justNow": "अभी",
+      "body": "आपकी अपॉइंटमेंट डॉ. {{doctor}} के साथ {{dateTime}} को सफलतापूर्वक बुक हो गई है!"
+    }
+  },
+  "doctors": {
+    "backToHospitals": "अस्पतालों पर वापस जाएँ",
+    "loading": "डॉक्टर लोड हो रहे हैं...",
+    "stats": {
+      "doctorsAvailable": "उपलब्ध डॉक्टर",
+      "currentlyAvailable": "वर्तमान में उपलब्ध",
+      "specializations": "विशेषज्ञताएँ"
+    },
+    "noDoctorsTitle": "कोई डॉक्टर नहीं मिला",
+    "noDoctorsSubtitle": "{{hospital}} में वर्तमान में कोई डॉक्टर उपलब्ध नहीं है।",
+    "headerTitle": "उपलब्ध डॉक्टर",
+    "headerSubtitle": "अपनी अपॉइंटमेंट बुक करने के लिए {{hospital}} से एक डॉक्टर चुनें।",
+    "gridTitle": "चिकित्सा स्टाफ",
+    "status": {
+      "availableNow": "अभी उपलब्ध",
+      "currentlyUnavailable": "वर्तमान में अनुपलब्ध"
+    },
+    "actions": {
+      "bookAppointment": "अपॉइंटमेंट बुक करें"
+    },
+    "summary": "{{hospital}} में {{count}} डॉक्टर{{plural}} मिले"
+  },
+  "adminLogin": {
+    "title": "एडमिन लॉगिन",
+    "subtitle": "अपने हॉस्पिटल एडमिन खाते में साइन इन करें",
+    "fields": {
+      "hospitalId": "अस्पताल आईडी",
+      "hospitalIdPlaceholder": "अपनी अस्पताल आईडी दर्ज करें",
+      "password": "पासवर्ड",
+      "passwordPlaceholder": "अपना पासवर्ड दर्ज करें"
+    },
+    "buttons": {
+      "signingIn": "साइन इन हो रहा है...",
+      "signIn": "साइन इन"
+    },
+    "errors": {
+      "fillAllFields": "कृपया सभी फ़ील्ड भरें",
+      "loginFailed": "लॉगिन असफल। कृपया पुनः प्रयास करें।",
+      "unexpected": "कोई अप्रत्याशित त्रुटि हुई"
+    },
+    "links": {
+      "noAccount": "क्या आपका खाता नहीं है?",
+      "registerHere": "यहाँ रजिस्टर करें"
+    }
+  },
+  "pharmacyLogin": {
+    "title": "फार्मेसी लॉगिन",
+    "subtitle": "अपने खाते तक पहुँचने के लिए क्रेडेंशियल दर्ज करें",
+    "fields": {
+      "licenseNumber": "लाइसेंस नंबर",
+      "licenseNumberPlaceholder": "अपना लाइसेंस नंबर दर्ज करें",
+      "password": "पासवर्ड",
+      "passwordPlaceholder": "अपना पासवर्ड दर्ज करें"
+    },
+    "buttons": {
+      "loggingIn": "लॉगिन हो रहा है...",
+      "login": "लॉगिन"
+    },
+    "links": {
+      "noAccount": "क्या आपका खाता नहीं है?",
+      "register": "रजिस्टर"
+    },
+    "toasts": {
+      "success": "लॉगिन सफल",
+      "invalid": "अमान्य क्रेडेंशियल्स"
+    }
+  },
+  "adminRegister": {
+    "title": "एडमिन पंजीकरण",
+    "subtitle": "अपने अस्पताल एडमिन खाते को पंजीकृत करें",
+    "fields": {
+      "hospitalId": "अस्पताल आईडी",
+      "hospitalIdPlaceholder": "अस्पताल आईडी दर्ज करें",
+      "email": "ईमेल पता",
+      "emailPlaceholder": "ईमेल पता दर्ज करें",
+      "address": "अस्पताल का पता",
+      "addressPlaceholder": "अस्पताल का पता दर्ज करें",
+      "password": "पासवर्ड",
+      "passwordPlaceholder": "न्यूनतम 6 अक्षर"
+    },
+    "buttons": {
+      "registering": "पंजीकरण हो रहा है...",
+      "register": "पंजीकरण करें"
+    },
+    "links": {
+      "haveAccount": "क्या आपका पहले से खाता है?",
+      "loginHere": "यहाँ लॉगिन करें"
+    },
+    "errors": {
+      "required": "सभी फ़ील्ड आवश्यक हैं",
+      "passwordLength": "पासवर्ड कम से कम 6 अक्षरों का होना चाहिए",
+      "invalidEmail": "अमान्य ईमेल प्रारूप",
+      "failed": "पंजीकरण विफल। कृपया पुनः प्रयास करें।",
+      "unexpected": "कोई अप्रत्याशित त्रुटि हुई"
+    },
+    "toasts": {
+      "success": "पंजीकरण सफल! कृपया लॉगिन करें।"
+    }
+  },
+  "pharmacySignup": {
+    "title": "अपनी फार्मेसी पंजीकृत करें",
+    "subtitle": "अपना फार्मेसी खाता बनाने के लिए विवरण भरें",
+    "sections": {
+      "generalInfo": "सामान्य जानकारी",
+      "addressDetails": "पते का विवरण",
+      "contactAccount": "संपर्क और खाता विवरण",
+      "pharmacistDetails": "फार्मासिस्ट विवरण"
+    },
+    "fields": {
+      "name": "फार्मेसी का नाम",
+      "licenseNumber": "लाइसेंस नंबर",
+      "address": "सड़क का पता",
+      "district": "जिला",
+      "state": "राज्य",
+      "pincode": "पिनकोड",
+      "contactNumber": "संपर्क नंबर",
+      "email": "ईमेल पता",
+      "password": "पासवर्ड",
+      "workingTimings": "कार्य समय",
+      "workingTimingsPlaceholder": "उदा. 9:00 AM - 9:00 PM",
+      "pharmacistName": "फार्मासिस्ट का नाम",
+      "pharmacistId": "फार्मासिस्ट आईडी",
+      "pharmacistQualification": "फार्मासिस्ट योग्यता"
+    },
+    "buttons": {
+      "creating": "खाता बनाया जा रहा है...",
+      "create": "खाता बनाएं"
+    },
+    "links": {
+      "haveAccount": "क्या आपका पहले से खाता है?",
+      "signIn": "साइन इन"
+    },
+    "toasts": {
+      "success": "फार्मेसी सफलतापूर्वक पंजीकृत हुई",
+      "failed": "पंजीकरण विफल"
+    }
+  }
+  ,
+  "adminDashboard": {
+    "welcome": "वापसी पर स्वागत है, एडमिन!",
+    "hospitalId": "अस्पताल आईडी: {{id}}",
+    "notAssigned": "निर्धारित नहीं",
+    "quickActions": "त्वरित कार्य",
+    "cards": {
+      "manageDoctors": {
+        "title": "डॉक्टर प्रबंधन",
+        "subtitle": "अपने अस्पताल में डॉक्टर जोड़ें, संपादित करें या हटाएँ।"
+      },
+      "viewAppointments": {
+        "title": "अपॉइंटमेंट देखें",
+        "subtitle": "रोगियों की अपॉइंटमेंट की निगरानी और प्रबंधन करें।"
+      },
+      "patientRecords": {
+        "title": "रोगी रिकॉर्ड",
+        "subtitle": "रोगी की जानकारी देखें और प्रबंधित करें।"
+      },
+      "settings": {
+        "title": "सेटिंग्स",
+        "subtitle": "अस्पताल और सिस्टम सेटिंग्स कॉन्फ़िगर करें।"
+      }
+    }
+  }
+  ,
+  "adminDoctors": {
+    "common": {
+      "email": "ईमेल",
+      "shift": "शिफ्ट",
+      "status": "स्थिति",
+      "active": "सक्रिय",
+      "inactive": "निष्क्रिय",
+      "appointments": "अपॉइंटमेंट्स",
+      "hospitalId": "अस्पताल आईडी",
+      "unknown": "अज्ञात"
+    },
+    "actions": {
+      "view": "देखें",
+      "edit": "संपादित करें",
+      "delete": "हटाएँ",
+      "addDoctor": "डॉक्टर जोड़ें"
+    },
+    "confirmDelete": "क्या आप वाकई इस डॉक्टर को हटाना चाहते हैं?",
+    "list": {
+      "title": "सभी डॉक्टर",
+      "hospital": "अस्पताल: {{id}}",
+      "addNewDoctor": "नया डॉक्टर जोड़ें"
+    },
+    "empty": {
+      "title": "कोई डॉक्टर नहीं मिला",
+      "subtitle": "अपना पहला डॉक्टर जोड़कर शुरू करें।"
+    },
+    "modal": {
+      "title": "डॉक्टर विवरण",
+      "editDoctor": "डॉक्टर संपादित करें",
+      "close": "बंद करें"
+    },
+    "add": {
+      "title": "नया डॉक्टर जोड़ें",
+      "subtitle": "सिस्टम में जोड़ने के लिए डॉक्टर की जानकारी भरें",
+      "fields": {
+        "fullName": "पूरा नाम",
+        "email": "ईमेल पता",
+        "specialisation": "विशेषज्ञता",
+        "shiftStart": "शिफ्ट शुरू (24 घंटे)",
+        "shiftEnd": "शिफ्ट समाप्त (24 घंटे)",
+        "isActive": "डॉक्टर वर्तमान में सक्रिय है"
+      },
+      "placeholders": {
+        "name": "डॉ. जॉन डो",
+        "email": "doctor@hospital.com",
+        "specialisation": "कार्डियोलॉजी, न्यूरोलॉजी, आदि",
+        "start": "9",
+        "end": "17"
+      },
+      "buttons": {
+        "adding": "जोड़ा जा रहा है...",
+        "addDoctor": "डॉक्टर जोड़ें",
+        "cancel": "रद्द करें"
+      },
+      "errors": {
+        "nameRequired": "नाम आवश्यक है",
+        "emailRequired": "ईमेल आवश्यक है",
+        "emailInvalid": "कृपया मान्य ईमेल पता दर्ज करें",
+        "specialisationRequired": "विशेषज्ञता आवश्यक है",
+        "startRange": "शुरू समय 0 से 23 के बीच होना चाहिए",
+        "endRange": "समाप्त समय 0 से 23 के बीच होना चाहिए",
+        "startBeforeEnd": "शुरू समय समाप्त समय से पहले होना चाहिए",
+        "fixForm": "कृपया फ़ॉर्म की त्रुटियाँ ठीक करें"
+      },
+      "toasts": {
+        "success": "डॉक्टर सफलतापूर्वक जोड़ा गया!",
+        "failed": "डॉक्टर जोड़ना विफल रहा"
+      }
+    },
+    "edit": {
+      "title": "डॉक्टर संपादित करें",
+      "subtitle": "सिस्टम में डॉक्टर की जानकारी अपडेट करें",
+      "fields": {
+        "fullName": "पूरा नाम",
+        "email": "ईमेल पता",
+        "specialisation": "विशेषज्ञता",
+        "shiftStart": "शिफ्ट शुरू (24 घंटे)",
+        "shiftEnd": "शिफ्ट समाप्त (24 घंटे)",
+        "isActive": "डॉक्टर वर्तमान में सक्रिय है"
+      },
+      "placeholders": {
+        "name": "डॉ. जॉन डो",
+        "email": "doctor@hospital.com",
+        "specialisation": "कार्डियोलॉजी, न्यूरोलॉजी, आदि",
+        "start": "9",
+        "end": "17"
+      },
+      "buttons": {
+        "update": "डॉक्टर अपडेट करें",
+        "cancel": "रद्द करें",
+        "updating": "अपडेट किया जा रहा है..."
+      },
+      "toasts": {
+        "success": "डॉक्टर सफलतापूर्वक अपडेट किया गया!",
+        "failed": "डॉक्टर अपडेट विफल रहा",
+        "error": "डॉक्टर को अपडेट करते समय एक त्रुटि हुई"
+      }
+    }
+  }
+  ,
+  "adminAppointments": {
+    "title": "सभी अपॉइंटमेंट्स",
+    "subtitle": "अपने अस्पताल में रोगियों की अपॉइंटमेंट्स देखें और प्रबंधित करें",
+    "filters": {
+      "status": {
+        "all": "सभी स्थितियाँ",
+        "confirmed": "कन्फर्म",
+        "pending": "लंबित",
+        "cancelled": "रद्द"
+      }
+    },
+    "empty": {
+      "title": "अभी कोई अपॉइंटमेंट नहीं",
+      "subtitle": "रोगियों द्वारा बनाई गई अपॉइंटमेंट्स यहाँ दिखाई देंगी।"
+    },
+    "table": {
+      "patient": "रोगी",
+      "doctor": "डॉक्टर",
+      "time": "समय",
+      "status": "स्थिति",
+      "actions": "कार्य"
+    }
+  }
+}

@@ -1,0 +1,580 @@
+{
+  "brand": "VitalsHub",
+  "brandPharmacy": "VitalsHub - Pharmacy",
+  "loading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...",
+  "nav": {
+    "home": "ਮੁੱਖ ਪੰਨਾ",
+    "quickAsk": "ਝਟਪਟ ਪੁੱਛੋ",
+    "appointments": "ਮੇਰੀ ਮਿਲਣੀਆਂ",
+    "medicalRecords": "ਚਿਕਿਤਸਾ ਰਿਕਾਰਡ",
+    "pharmacy": "ਦਵਾਈਆਂ ਅਤੇ ਫਾਰਮੈਸੀ",
+    "myProfile": "ਮੇਰਾ ਪ੍ਰੋਫ਼ਾਈਲ",
+    "logout": "ਲਾਗ ਆਉਟ"
+  },
+  "chatbot": {
+    "initialMessage": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ! ਮੈਂ ਤੁਹਾਡਾ ਸਿਹਤ ਸਹਾਇਕ ਹਾਂ। ਮੈਂ ਤੁਹਾਡੀ ਡਾਕਟਰ ਲੱਭਣ, ਮਿਲਣੀਆਂ ਦੇਖਣ ਜਾਂ ਸਿਹਤ ਅਤੇ ਦਵਾਈਆਂ ਨਾਲ ਸੰਬੰਧਿਤ ਸਵਾਲਾਂ ਦੇ ਜਵਾਬ ਦੇਣ ਵਿੱਚ ਮਦਦ ਕਰ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ।",
+    "headerTitle": "ਆਪਣੇ ਸਿਹਤ ਸੰਬੰਧੀ ਸਵਾਲ ਇੱਥੇ ਪੁੱਛੋ",
+    "sessionId": "ਸੈਸ਼ਨ ਆਈਡੀ",
+    "inputPlaceholder": "ਹਸਪਤਾਲ ਦੇ ਸਮੇਂ, ਡਾਕਟਰ ਜਾਂ ਦਵਾਈਆਂ ਬਾਰੇ ਪੁੱਛੋ...",
+    "sending": "ਭੇਜਿਆ ਜਾ ਰਿਹਾ ਹੈ...",
+    "send": "ਭੇਜੋ",
+    "thinking": "ਸੋਚਿਆ ਜਾ ਰਿਹਾ ਹੈ..."
+  },
+  "hospitals": {
+    "loading": "ਹਸਪਤਾਲ ਲੋਡ ਹੋ ਰਹੇ ਹਨ...",
+    "emptyTitle": "ਕੋਈ ਹਸਪਤਾਲ ਨਹੀਂ ਮਿਲਿਆ",
+    "emptySubtitle": "ਸਾਡੇ ਨੈੱਟਵਰਕ ਵਿੱਚ ਇਸ ਵੇਲੇ ਕੋਈ ਹਸਪਤਾਲ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+    "tryAgain": "ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
+    "headerTitle": "ਉਪਲਬਧ ਹਸਪਤਾਲ",
+    "headerSubtitle": "ਉਪਲਬਧ ਡਾਕਟਰ ਵੇਖਣ ਅਤੇ ਮਿਲਣੀ ਬੁੱਕ ਕਰਨ ਲਈ ਹੇਠਾਂ ਇੱਕ ਹਸਪਤਾਲ ਚੁਣੋ।",
+    "stats": {
+      "hospitalsAvailable": "ਉਪਲਬਧ ਹਸਪਤਾਲ",
+      "emergencyCare": "ਐਮਰਜੈਂਸੀ ਸੇਵਾ",
+      "expertDoctors": "ਵਿਸ਼ੇਸ਼ਗਿਆ ਡਾਕਟਰ"
+    },
+    "networkTitle": "ਹਸਪਤਾਲ ਨੈੱਟਵਰਕ",
+    "tags": {
+      "emergencyCare": "ਐਮਰਜੈਂਸੀ ਸੇਵਾ",
+      "surgery": "ਸਰਜਰੀ",
+      "diagnostics": "ਡਾਇਗਨੋਸਟਿਕਸ"
+    },
+    "actions": {
+      "viewDoctors": "ਡਾਕਟਰ ਵੇਖੋ"
+    },
+    "availableNow": "ਹੁਣ ਉਪਲਬਧ",
+    "quickBooking": "ਤੁਰੰਤ ਬੁਕਿੰਗ ⚡",
+    "summary": "ਮਿਲਣੀ ਲਈ {{count}} ਹਸਪਤਾਲ{{plural}} ਉਪਲਬਧ ਹਨ"
+  },
+  "pharmacies": {
+    "title": "ਸਭ ਫਾਰਮੇਸੀਆਂ",
+    "subtitle": "ਆਪਣੀ ਸਭ ਤੋਂ ਨੇੜਲੀ ਫਾਰਮੇਸੀ ਵਿੱਚ ਦਵਾਈਆਂ ਖੋਜੋ",
+    "searchPlaceholder": "ਫਾਰਮੇਸੀ ਖੋਜੋ...",
+    "search": "ਖੋਜੋ",
+    "viewMedicines": "ਦਵਾਈਆਂ ਵੇਖੋ",
+    "errors": {
+      "loadFailed": "ਫਾਰਮੇਸੀਆਂ ਲੋਡ ਕਰਨ ਵਿੱਚ ਅਸਫਲ। ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+      "searchFailed": " ਫਾਰਮੇਸੀ ਖੋਜਣ ਵਿੱਚ ਅਸਫਲ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+    }
+  },
+  "pharmacy": {
+    "backToPharmacies": "ਫਾਰਮੇਸੀਆਂ ਵੱਲ ਵਾਪਸ ਜਾਓ",
+    "availableMedicines": "ਉਪਲਬਧ ਦਵਾਈਆਂ",
+    "searchPlaceholder": "ਦਵਾਈਆਂ ਖੋਜੋ...",
+    "noMedicines": "ਕੋਈ ਦਵਾਈਆਂ ਨਹੀਂ ਮਿਲੀਆਂ",
+    "tryAdjust": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਖੋਜ ਸ਼ਬਦਾਂ ਨੂੰ ਬਦਲ ਕੇ ਵੇਖੋ",
+    "stock": "ਸਟਾਕ: {{count}} ਯੂਨਿਟਸ",
+    "viewDetails": "ਵੇਰਵੇ ਵੇਖੋ",
+    "errors": {
+      "loadFailed": "ਫਾਰਮੇਸੀ ਵੇਰਵੇ ਲੋਡ ਕਰਨ ਵਿੱਚ ਅਸਫਲ। ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+    }
+  },
+  "addDocs": {
+    "title": "ਮੇਰੇ ਦਸਤਾਵੇਜ਼",
+    "subtitle": "ਆਪਣੇ ਮੈਡੀਕਲ ਦਸਤਾਵੇਜ਼ਾਂ ਨੂੰ ਆਸਾਨੀ ਅਤੇ ਸੁਰੱਖਿਆ ਨਾਲ ਪ੍ਰਬੰਧਿਤ ਕਰੋ।",
+    "dragDrop": "ਫਾਈਲਾਂ ਇੱਥੇ ਖਿੱਚੋ ਅਤੇ ਛੱਡੋ",
+    "browse": "ਜਾਂ ਬ੍ਰਾਊਜ਼ ਕਰਨ ਲਈ ਕਲਿੱਕ ਕਰੋ",
+    "form": {
+      "titlePlaceholder": "ਸਿਰਲੇਖ ਦਰਜ ਕਰੋ"
+    },
+    "buttons": {
+      "uploading": "ਅਪਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...",
+      "upload": "ਦਸਤਾਵੇਜ਼ ਅਪਲੋਡ ਕਰੋ",
+      "view": "ਵੇਖੋ",
+      "download": "ਡਾਊਨਲੋਡ",
+      "delete": "ਹਟਾਓ"
+    },
+    "uploadedTitle": "ਅਪਲੋਡ ਕੀਤੇ ਦਸਤਾਵੇਜ਼",
+    "table": {
+      "name": "ਦਸਤਾਵੇਜ਼ ਦਾ ਨਾਮ",
+      "date": "ਅਪਲੋਡ ਤਾਰੀਖ",
+      "type": "ਫਾਈਲ ਕਿਸਮ",
+      "actions": "ਕਾਰਵਾਈਆਂ"
+    },
+    "fileTypes": {
+      "pdf": "ਪੀਡੀਐਫ",
+      "image": "ਚਿੱਤਰ"
+    },
+    "empty": "ਹਾਲੇ ਕੋਈ ਫਾਈਲ ਅਪਲੋਡ ਨਹੀਂ ਕੀਤੀ ਗਈ",
+    "toasts": {
+      "fetchError": "ਦਸਤਾਵੇਜ਼ ਲਿਆਉਣ ਵਿੱਚ ਗਲਤੀ",
+      "deleteSuccess": "ਦਸਤਾਵੇਜ਼ ਸਫਲਤਾਪੂਰਵਕ ਹਟਾਇਆ ਗਿਆ",
+      "deleteError": "ਦਸਤਾਵੇਜ਼ ਹਟਾਉਣ ਵਿੱਚ ਗਲਤੀ",
+      "requiredFields": "ਸਾਰੇ ਖੇਤਰ ਲਾਜ਼ਮੀ ਹਨ"
+    }
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "hi": "Hindi",
+    "pa": "ਪੰਜਾਬੀ",
+    "te": "తెలుగు"
+  },
+  "admin": {
+    "allDoctors": "All Doctors"
+  },
+  "homepage": {
+    "welcomeBack": "ਵਾਪਸੀ 'ਤੇ ਸੁਆਗਤ ਹੈ!",
+    "welcomeBackName": "ਵਾਪਸੀ 'ਤੇ ਸੁਆਗਤ ਹੈ, {{name}}!",
+    "summary": "ਇੱਥੇ ਤੁਹਾਡੀਆਂ ਤਾਜ਼ਾ ਗਤੀਵਿਧੀਆਂ ਦਾ ਸਾਰ ਅਤੇ ਆਮ ਕੰਮਾਂ ਲਈ ਤੇਜ਼ ਪਹੁੰਚ ਹੈ।",
+    "quickActions": "ਤੁਰੰਤ ਕਾਰਵਾਈਆਂ",
+    "scheduleAppointment": {
+      "title": "ਮਿਲਣੀ ਸ਼ੈਡੂਲ ਕਰੋ",
+      "subtitle": "ਡਾਕਟਰ ਨਾਲ ਪਰਾਮਰਸ਼ ਬੁੱਕ ਕਰੋ"
+    },
+    "medicalRecords": {
+      "title": "ਚਿਕਿਤਸਾ ਰਿਕਾਰਡ",
+      "subtitle": "ਆਪਣੇ ਸਿਹਤ ਦਸਤਾਵੇਜ਼ ਵੇਖੋ"
+    },
+    "recentActivity": "ਤਾਜ਼ਾ ਗਤੀਵਿਧੀ",
+    "upcomingAppointment": "ਆਉਣ ਵਾਲੀ ਮਿਲਣੀ",
+    "appointmentWith": "{{doctor}} ਨਾਲ ਮਿਲਣੀ",
+    "recentMedicalRecords": "ਤਾਜ਼ਾ ਚਿਕਿਤਸਾ ਰਿਕਾਰਡ",
+    "checkupResults": "{{monthYear}} ਦੇ ਚੈਕਅੱਪ ਨਤੀਜੇ",
+    "addDocuments": "ਦਸਤਾਵੇਜ਼ ਜੋੜੋ"
+  },
+  "login": {
+    "title": "ਲਾਗਇਨ",
+    "email": "ਈਮੇਲ",
+    "password": "ਪਾਸਵਰਡ",
+    "loggingIn": "ਲਾਗਇਨ ਹੋ ਰਿਹਾ ਹੈ...",
+    "login": "ਲਾਗਇਨ",
+    "noAccount": "ਕੀ ਤੁਹਾਡਾ ਖਾਤਾ ਨਹੀਂ ਹੈ?",
+    "signUp": "ਸਾਈਨ ਅਪ"
+  },
+  "signup": {
+    "title": "Sign Up",
+    "fullName": "Full Name",
+    "email": "Email",
+    "password": "Password",
+    "phoneNumber": "Phone Number",
+    "dateOfBirth": "Date of Birth",
+    "signingUp": "Signing Up...",
+    "signUp": "Sign Up",
+    "haveAccount": "Already have an account?",
+    "login": "Login",
+    "errors": {
+      "required": "All fields are required",
+      "passwordLength": "Password must be at least 6 characters long",
+      "phoneLength": "Phone number must be 10 digits long",
+      "invalidEmail": "Invalid email format"
+    }
+  },
+  "singleLogin": {
+    "header": {
+      "title": "{{brand}} ਵਿੱਚ ਤੁਹਾਡਾ ਸੁਆਗਤ ਹੈ",
+      "subtitle": "ਆਪਣਾ ਲਾਗਇਨ ਕਿਸਮ ਚੁਣੋ ਅਤੇ ਪ੍ਰਮਾਣ ਪੱਤਰ ਦਰਜ ਕਰੋ"
+    },
+    "chooseType": "ਲਾਗਇਨ ਕਿਸਮ ਚੁਣੋ",
+    "types": {
+      "user": {
+        "title": "ਮਰੀਜ਼ ਲਾਗਇਨ",
+        "description": "ਆਪਣੇ ਮੈਡੀਕਲ ਰਿਕਾਰਡ ਵੇਖੋ ਅਤੇ ਮਿਲਣੀਆਂ ਬੁੱਕ ਕਰੋ"
+      },
+      "admin": {
+        "title": "ਐਡਮਿਨ ਲਾਗਇਨ",
+        "description": "ਹਸਪਤਾਲਾਂ, ਡਾਕਟਰਾਂ ਅਤੇ ਸਿਸਟਮ ਕਾਰਵਾਹੀਆਂ ਦਾ ਪ੍ਰਬੰਧ ਕਰੋ"
+      },
+      "pharmacy": {
+        "title": "ਫਾਰਮੇਸੀ ਲਾਗਇਨ",
+        "description": "ਨੁਸਖ਼ਿਆਂ ਅਤੇ ਜਖੀਰੇ ਦਾ ਪ੍ਰਬੰਧ ਕਰੋ"
+      }
+    },
+    "links": {
+      "forgotPassword": "ਪਾਸਵਰਡ ਭੁੱਲ ਗਏ?",
+      "needHelp": "ਮਦਦ ਚਾਹੀਦੀ ਹੈ?"
+    }
+  },
+  "profile": {
+    "title": "My Profile",
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "phoneNumber": "Phone Number",
+    "dateOfBirth": "Date of Birth",
+    "saveChanges": "Save Changes"
+  },
+  "specialisations": {
+    "Cardiologist": "ਹਿਰਦੇ ਰੋਗ ਵਿਸ਼ੇਸ਼ਗਿਆ",
+    "Dermatologist": "ਚਮੜੀ ਰੋਗ ਵਿਸ਼ੇਸ਼ਗਿਆ",
+    "Neurologist": "ਤੰਤਰਿਕਾ ਵਿਸ਼ੇਸ਼ਗਿਆ",
+    "Orthopedic": "ਅਸਥਿ ਰੋਗ ਵਿਸ਼ੇਸ਼ਗਿਆ",
+    "Pediatrician": "ਬਾਲ ਰੋਗ ਵਿਸ਼ੇਸ਼ਗਿਆ",
+    "General Physician": "ਆਮ ਚਿਕਿਤਸਕ",
+    "ENT": "ਕੰਨ ਨੱਕ ਗਲਾ ਵਿਸ਼ੇਸ਼ਗਿਆ",
+    "Ophthalmologist": "ਅੱਖਾਂ ਦੇ ਵਿਸ਼ੇਸ਼ਗਿਆ",
+    "Oncologist": "ਕੈਂਸਰ ਵਿਸ਼ੇਸ਼ਗਿਆ",
+    "Gynecologist": "ਇਸਤਰੀ ਰੋਗ ਵਿਸ਼ੇਸ਼ਗਿਆ",
+    "Dentist": "ਦੰਦਾਂ ਦੇ ਡਾਕਟਰ",
+    "Psychiatrist": "ਮਨੋਰੋਗ ਵਿਸ਼ੇਸ਼ਗਿਆ",
+    "Radiologist": "ਰੇਡੀਓਲੋਜਿਸਟ"
+  },
+  "medicalRecords": {
+    "title": "ਚਿਕਿਤਸਾ ਰਿਕਾਰਡ",
+    "table": {
+      "title": "ਸਿਰਲੇਖ",
+      "dateUploaded": "ਅੱਪਲੋਡ ਦੀ ਤਾਰੀਖ",
+      "type": "ਕਿਸਮ",
+      "actions": "ਕਾਰਵਾਈਆਂ"
+    },
+    "empty": "ਕੋਈ ਚਿਕਿਤਸਾ ਰਿਕਾਰਡ ਨਹੀਂ ਮਿਲਿਆ।",
+    "type": {
+      "pdf": "ਪੀਡੀਐਫ",
+      "image": "ਚਿੱਤਰ"
+    },
+    "actions": {
+      "view": "ਵੇਖੋ",
+      "download": "ਡਾਊਨਲੋਡ"
+    }
+  },
+  "appointments": {
+    "title": "ਮੇਰੀ ਮਿਲਣੀਆਂ",
+    "timeLabel": "ਸਮਾਂ:",
+    "statusLabel": "ਸਥਿਤੀ:",
+    "status": {
+      "Confirmed": "ਪੁਸ਼ਟੀਤ",
+      "Pending": "ਬਕਾਇਆ",
+      "Cancelled": "ਰੱਦ"
+    },
+    "empty": "ਕੋਈ ਮਿਲਣੀ ਨਹੀਂ ਮਿਲੀ।"
+  },
+  "createAppointment": {
+    "back": "← ਡਾਕਟਰਾਂ ਵੱਲ ਵਾਪਸ ਜਾਓ",
+    "title": "ਮਿਲਣੀ ਬੁੱਕ ਕਰੋ",
+    "subtitle": "ਆਪਣੀ ਮਿਲਣੀ ਬੁੱਕ ਕਰਨ ਲਈ ਵੇਰਵੇ ਭਰੋ",
+    "selectedHospital": "ਚੁਣਿਆ ਹਸਪਤਾਲ",
+    "selectedDoctor": "ਚੁਣਿਆ ਡਾਕਟਰ",
+    "errors": {
+      "notSelected": "ਕਿਰਪਾ ਕਰਕੇ ਪਹਿਲਾਂ ਇੱਕ ਡਾਕਟਰ ਚੁਣੋ",
+      "required": "ਸਾਰੇ ਖੇਤਰ ਲਾਜ਼ਮੀ ਹਨ",
+      "failed": "ਮਿਲਣੀ ਬੁੱਕਿੰਗ ਅਸਫਲ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+      "unexpected": "ਕੋਈ ਅਣਅਪੇਖਿਤ ਗਲਤੀ ਹੋ ਗਈ"
+    },
+    "form": {
+      "appointmentDateTime": "ਮਿਲਣੀ ਦੀ ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ *",
+      "descriptionLabel": "ਵੇਰਵਾ / ਲੱਛਣ *",
+      "descriptionPlaceholder": "ਆਪਣੇ ਲੱਛਣ ਜਾਂ ਮਿਲਣੀ ਦਾ ਕਾਰਨ ਵੇਰਵਾ ਕਰੋ...",
+      "emergencyLabel": "ਇਹ ਐਮਰਜੈਂਸੀ ਮਿਲਣੀ ਹੈ"
+    },
+    "buttons": {
+      "cancel": "ਰੱਦ ਕਰੋ",
+      "booking": "ਬੁੱਕਿੰਗ ਹੋ ਰਹੀ ਹੈ...",
+      "bookAppointment": "ਮਿਲਣੀ ਬੁੱਕ ਕਰੋ"
+    },
+    "toast": {
+      "title": "ਮਿਲਣੀ ਦੀ ਪੁਸ਼ਟੀ ✅",
+      "justNow": "ਹੁਣੇ ਹੀ",
+      "body": "ਤੁਹਾਡੀ ਮਿਲਣੀ ਡਾ. {{doctor}} ਨਾਲ {{dateTime}} ਨੂੰ ਸਫਲਤਾਪੂਰਵਕ ਬੁੱਕ ਹੋ ਗਈ ਹੈ!"
+    }
+  },
+  "doctors": {
+    "backToHospitals": "ਹਸਪਤਾਲਾਂ ਵੱਲ ਵਾਪਸ ਜਾਓ",
+    "loading": "ਡਾਕਟਰ ਲੋਡ ਹੋ ਰਹੇ ਹਨ...",
+    "noDoctorsTitle": "ਕੋਈ ਡਾਕਟਰ ਨਹੀਂ ਮਿਲਿਆ",
+    "noDoctorsSubtitle": "{{hospital}} ਵਿੱਚ ਇਸ ਵੇਲੇ ਕੋਈ ਡਾਕਟਰ ਉਪਲਬਧ ਨਹੀਂ।",
+    "headerTitle": "ਉਪਲਬਧ ਡਾਕਟਰ",
+    "headerSubtitle": "ਆਪਣੀ ਮਿਲਣੀ ਬੁੱਕ ਕਰਨ ਲਈ {{hospital}} ਤੋਂ ਡਾਕਟਰ ਚੁਣੋ।",
+    "stats": {
+      "doctorsAvailable": "ਉਪਲਬਧ ਡਾਕਟਰ",
+      "currentlyAvailable": "ਇਸ ਵੇਲੇ ਉਪਲਬਧ",
+      "specializations": "ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ"
+    },
+    "gridTitle": "ਮੈਡੀਕਲ ਸਟਾਫ",
+    "status": {
+      "availableNow": "ਹੁਣ ਉਪਲਬਧ",
+      "currentlyUnavailable": "ਇਸ ਵੇਲੇ ਉਪਲਬਧ ਨਹੀਂ"
+    },
+    "actions": {
+      "bookAppointment": "ਮਿਲਣੀ ਬੁੱਕ ਕਰੋ"
+    },
+    "summary": "{{hospital}} ਵਿੱਚ {{count}} ਡਾਕਟਰ{{plural}} ਮਿਲੇ"
+  },
+  "adminLogin": {
+    "title": "ਐਡਮਿਨ ਲਾਗਇਨ",
+    "subtitle": "ਆਪਣੇ ਹਸਪਤਾਲ ਐਡਮਿਨ ਖਾਤੇ ਵਿੱਚ ਸਾਇਨ ਇਨ ਕਰੋ",
+    "fields": {
+      "hospitalId": "ਹਸਪਤਾਲ ਆਈਡੀ",
+      "hospitalIdPlaceholder": "ਆਪਣੀ ਹਸਪਤਾਲ ਆਈਡੀ ਦਰਜ ਕਰੋ",
+      "password": "ਪਾਸਵਰਡ",
+      "passwordPlaceholder": "ਆਪਣਾ ਪਾਸਵਰਡ ਦਰਜ ਕਰੋ"
+    },
+    "buttons": {
+      "signingIn": "ਸਾਇਨ ਇਨ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
+      "signIn": "ਸਾਇਨ ਇਨ"
+    },
+    "errors": {
+      "fillAllFields": "ਕਿਰਪਾ ਕਰਕੇ ਸਾਰੇ ਖੇਤਰ ਭਰੋ",
+      "loginFailed": "ਲਾਗਇਨ ਅਸਫਲ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ ਕਰੋ।",
+      "unexpected": "ਕੋਈ ਅਣਅਪੇਖਿਤ ਗਲਤੀ ਹੋਈ"
+    },
+    "links": {
+      "noAccount": "ਕੀ ਤੁਹਾਡਾ ਖਾਤਾ ਨਹੀਂ ਹੈ?",
+      "registerHere": "ਇੱਥੇ ਰਜਿਸਟਰ ਕਰੋ"
+    }
+  },
+  "pharmacyLogin": {
+    "title": "ਫਾਰਮੇਸੀ ਲਾਗਇਨ",
+    "subtitle": "ਆਪਣੇ ਖਾਤੇ ਤੱਕ ਪਹੁੰਚ ਲਈ ਆਪਣੀਆਂ ਜਾਣਕਾਰੀਆਂ ਦਰਜ ਕਰੋ",
+    "fields": {
+      "licenseNumber": "ਲਾਇਸੈਂਸ ਨੰਬਰ",
+      "licenseNumberPlaceholder": "ਆਪਣਾ ਲਾਇਸੈਂਸ ਨੰਬਰ ਦਰਜ ਕਰੋ",
+      "password": "ਪਾਸਵਰਡ",
+      "passwordPlaceholder": "ਆਪਣਾ ਪਾਸਵਰਡ ਦਰਜ ਕਰੋ"
+    },
+    "buttons": {
+      "loggingIn": "ਲਾਗਇਨ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
+      "login": "ਲਾਗਇਨ"
+    },
+    "links": {
+      "noAccount": "ਕੀ ਤੁਹਾਡੇ ਕੋਲ ਖਾਤਾ ਨਹੀਂ ਹੈ?",
+      "register": "ਰਜਿਸਟਰ"
+    },
+    "toasts": {
+      "success": "ਲਾਗਇਨ ਸਫਲ",
+      "invalid": "ਅਵੈਧ ਜਾਣਕਾਰੀਆਂ"
+    }
+  },
+  "adminRegister": {
+    "title": "ਐਡਮਿਨ ਰਜਿਸਟਰੇਸ਼ਨ",
+    "subtitle": "ਆਪਣਾ ਹਸਪਤਾਲ ਐਡਮਿਨ ਖਾਤਾ ਰਜਿਸਟਰ ਕਰੋ",
+    "fields": {
+      "hospitalId": "ਹਸਪਤਾਲ ਆਈਡੀ",
+      "hospitalIdPlaceholder": "ਹਸਪਤਾਲ ਆਈਡੀ ਦਰਜ ਕਰੋ",
+      "email": "ਈਮੇਲ ਪਤਾ",
+      "emailPlaceholder": "ਈਮੇਲ ਪਤਾ ਦਰਜ ਕਰੋ",
+      "address": "ਹਸਪਤਾਲ ਦਾ ਪਤਾ",
+      "addressPlaceholder": "ਹਸਪਤਾਲ ਦਾ ਪਤਾ ਦਰਜ ਕਰੋ",
+      "password": "ਪਾਸਵਰਡ",
+      "passwordPlaceholder": "ਘੱਟੋ ਘੱਟ 6 ਅੱਖਰ"
+    },
+    "buttons": {
+      "registering": "ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਹੋ ਰਿਹਾ ਹੈ...",
+      "register": "ਰਜਿਸਟਰ ਕਰੋ"
+    },
+    "links": {
+      "haveAccount": "ਕੀ ਤੁਹਾਡਾ ਪਹਿਲਾਂ ਤੋਂ ਖਾਤਾ ਹੈ?",
+      "loginHere": "ਇੱਥੇ ਲਾਗਇਨ ਕਰੋ"
+    },
+    "errors": {
+      "required": "ਸਾਰੇ ਖੇਤਰ ਲਾਜ਼ਮੀ ਹਨ",
+      "passwordLength": "ਪਾਸਵਰਡ ਘੱਟੋ ਘੱਟ 6 ਅੱਖਰ ਲੰਬਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
+      "invalidEmail": "ਅਵੈਧ ਈਮੇਲ ਫਾਰਮੈਟ",
+      "failed": "ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਅਸਫਲ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+      "unexpected": "ਕੋਈ ਅਣਅਪੇਖਿਤ ਗਲਤੀ ਹੋਈ"
+    },
+    "toasts": {
+      "success": "ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਸਫਲ! ਕਿਰਪਾ ਕਰਕੇ ਲਾਗਇਨ ਕਰੋ।"
+    }
+  },
+  "pharmacySignup": {
+    "title": "ਆਪਣੀ ਫਾਰਮੇਸੀ ਰਜਿਸਟਰ ਕਰੋ",
+    "subtitle": "ਆਪਣਾ ਫਾਰਮੇਸੀ ਖਾਤਾ ਬਣਾਉਣ ਲਈ ਵੇਰਵੇ ਭਰੋ",
+    "sections": {
+      "generalInfo": "ਸਧਾਰਨ ਜਾਣਕਾਰੀ",
+      "addressDetails": "ਪਤੇ ਦੇ ਵੇਰਵੇ",
+      "contactAccount": "ਸੰਪਰਕ ਅਤੇ ਖਾਤੇ ਦੇ ਵੇਰਵੇ",
+      "pharmacistDetails": "ਫਾਰਮਾਸਿਸਟ ਦੇ ਵੇਰਵੇ"
+    },
+    "fields": {
+      "name": "ਫਾਰਮੇਸੀ ਦਾ ਨਾਮ",
+      "licenseNumber": "ਲਾਇਸੈਂਸ ਨੰਬਰ",
+      "address": "ਗਲੀ ਦਾ ਪਤਾ",
+      "district": "ਜ਼ਿਲ੍ਹਾ",
+      "state": "ਰਾਜ",
+      "pincode": "ਪਿਨਕੋਡ",
+      "contactNumber": "ਸੰਪਰਕ ਨੰਬਰ",
+      "email": "ਈਮੇਲ ਪਤਾ",
+      "password": "ਪਾਸਵਰਡ",
+      "workingTimings": "ਕੰਮ ਦੇ ਘੰਟੇ",
+      "workingTimingsPlaceholder": "ਜਿਵੇਂ 9:00 AM - 9:00 PM",
+      "pharmacistName": "ਫਾਰਮਾਸਿਸਟ ਦਾ ਨਾਮ",
+      "pharmacistId": "ਫਾਰਮਾਸਿਸਟ ਆਈਡੀ",
+      "pharmacistQualification": "ਫਾਰਮਾਸਿਸਟ ਯੋਗਤਾ"
+    },
+    "buttons": {
+      "creating": "ਖਾਤਾ ਬਣਾਇਆ ਜਾ ਰਿਹਾ ਹੈ...",
+      "create": "ਖਾਤਾ ਬਣਾਓ"
+    },
+    "links": {
+      "haveAccount": "ਕੀ ਤੁਹਾਡਾ ਪਹਿਲਾਂ ਤੋਂ ਖਾਤਾ ਹੈ?",
+      "signIn": "ਸਾਇਨ ਇਨ"
+    },
+    "toasts": {
+      "success": "ਫਾਰਮੇਸੀ ਸਫਲਤਾਪੂਰਵਕ ਰਜਿਸਟਰ ਕੀਤੀ ਗਈ",
+      "failed": "ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਅਸਫਲ"
+    }
+  }
+  ,
+  "adminDashboard": {
+    "welcome": "ਵਾਪਸੀ 'ਤੇ ਸੁਆਗਤ ਹੈ, ਐਡਮਿਨ!",
+    "hospitalId": "ਹਸਪਤਾਲ ਆਈਡੀ: {{id}}",
+    "notAssigned": "ਨਿਰਧਾਰਿਤ ਨਹੀਂ",
+    "quickActions": "ਤੁਰੰਤ ਕਾਰਵਾਈਆਂ",
+    "cards": {
+      "manageDoctors": {
+        "title": "ਡਾਕਟਰ ਪ੍ਰਬੰਧਨ",
+        "subtitle": "ਆਪਣੇ ਹਸਪਤਾਲ ਵਿੱਚ ਡਾਕਟਰ ਜੋੜੋ, ਸੰਪਾਦਿਤ ਕਰੋ ਜਾਂ ਹਟਾਓ।"
+      },
+      "viewAppointments": {
+        "title": "ਮਿਲਣੀਆਂ ਵੇਖੋ",
+        "subtitle": "ਮਰੀਜ਼ਾਂ ਦੀਆਂ ਮਿਲਣੀਆਂ ਦੀ ਨਿਗਰਾਨੀ ਅਤੇ ਪ੍ਰਬੰਧਨ ਕਰੋ।"
+      },
+      "patientRecords": {
+        "title": "ਮਰੀਜ਼ ਰਿਕਾਰਡ",
+        "subtitle": "ਮਰੀਜ਼ ਜਾਣਕਾਰੀ ਨੂੰ ਵੇਖੋ ਅਤੇ ਪ੍ਰਬੰਧਿਤ ਕਰੋ।"
+      },
+      "settings": {
+        "title": "ਸੈਟਿੰਗਜ਼",
+        "subtitle": "ਹਸਪਤਾਲ ਅਤੇ ਸਿਸਟਮ ਸੈਟਿੰਗਜ਼ ਸੰਰਚਿਤ ਕਰੋ।"
+      }
+    }
+  },
+  "pharmacyDashboard": {
+    "loading": "ਫਾਰਮੇਸੀ ਡਾਟਾ ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...",
+    "welcome": "ਸੁਆਗਤ ਹੈ, {{name}}",
+    "subtitle": "ਆਪਣੀ ਫਾਰਮੇਸੀ ਦੀਆਂ ਦਵਾਈਆਂ ਅਤੇ ਜਖੀਰਾ ਪ੍ਰਬੰਧਿਤ ਕਰੋ",
+    "actions": {
+      "addNewMedicine": "ਨਵੀਂ ਦਵਾਈ ਜੋੜੋ",
+      "edit": "ਸੰਪਾਦਿਤ ਕਰੋ",
+      "delete": "ਹਟਾਓ"
+    },
+    "empty": {
+      "title": "ਜਖੀਰੇ ਵਿੱਚ ਕੋਈ ਦਵਾਈ ਨਹੀਂ",
+      "subtitle": "ਆਪਣੀ ਫਾਰਮੇਸੀ ਜਖੀਰੇ ਵਿੱਚ ਦਵਾਈਆਂ ਜੋੜ ਕੇ ਸ਼ੁਰੂ ਕਰੋ"
+    },
+    "badges": {
+      "inStock": "ਸਟਾਕ ਵਿੱਚ",
+      "outOfStock": "ਸਟਾਕ ਖਤਮ"
+    },
+    "fields": {
+      "manufacturer": "ਨਿਰਮਾਤਾ",
+      "batchNumber": "ਬੈਚ ਨੰਬਰ",
+      "price": "ਕੀਮਤ",
+      "stock": "ਸਟਾਕ"
+    },
+    "units": "ਯੂਨਿਟ"
+  }
+  ,
+  "adminDoctors": {
+    "common": {
+      "email": "ਈਮੇਲ",
+      "shift": "ਸ਼ਿਫਟ",
+      "status": "ਸਥਿਤੀ",
+      "active": "ਸਕਰੀਅ",
+      "inactive": "ਗੈਰ-ਸਕਰੀਅ",
+      "appointments": "ਮੁਲਾਕਾਤਾਂ",
+      "hospitalId": "ਹਸਪਤਾਲ ਆਈਡੀ",
+      "unknown": "ਅਣਜਾਣ"
+    },
+    "actions": {
+      "view": "ਵੇਖੋ",
+      "edit": "ਸੰਪਾਦਿਤ ਕਰੋ",
+      "delete": "ਹਟਾਓ",
+      "addDoctor": "ਡਾਕਟਰ ਜੋੜੋ"
+    },
+    "confirmDelete": "ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਇਸ ਡਾਕਟਰ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
+    "list": {
+      "title": "ਸਾਰੇ ਡਾਕਟਰ",
+      "hospital": "ਹਸਪਤਾਲ: {{id}}",
+      "addNewDoctor": "ਨਵਾਂ ਡਾਕਟਰ ਜੋੜੋ"
+    },
+    "empty": {
+      "title": "ਕੋਈ ਡਾਕਟਰ ਨਹੀਂ ਮਿਲਿਆ",
+      "subtitle": "ਆਪਣਾ ਪਹਿਲਾ ਡਾਕਟਰ ਜੋੜ ਕੇ ਸ਼ੁਰੂ ਕਰੋ।"
+    },
+    "modal": {
+      "title": "ਡਾਕਟਰ ਵੇਰਵਾ",
+      "editDoctor": "ਡਾਕਟਰ ਸੰਪਾਦਿਤ ਕਰੋ",
+      "close": "ਬੰਦ ਕਰੋ"
+    },
+    "add": {
+      "title": "ਨਵਾਂ ਡਾਕਟਰ ਜੋੜੋ",
+      "subtitle": "ਸਿਸਟਮ ਵਿੱਚ ਜੋੜਣ ਲਈ ਡਾਕਟਰ ਦੀ ਜਾਣਕਾਰੀ ਭਰੋ",
+      "fields": {
+        "fullName": "ਪੂਰਾ ਨਾਮ",
+        "email": "ਈਮੇਲ ਪਤਾ",
+        "specialisation": "ਵਿਸ਼ੇਸ਼ਤਾ",
+        "shiftStart": "ਸ਼ਿਫਟ ਸ਼ੁਰੂ (24 ਘੰਟੇ)",
+        "shiftEnd": "ਸ਼ਿਫਟ ਖਤਮ (24 ਘੰਟੇ)",
+        "isActive": "ਡਾਕਟਰ ਵਰਤਮਾਨ ਵਿੱਚ ਸਕਰੀਅ ਹੈ"
+      },
+      "placeholders": {
+        "name": "ਡਾ. ਜੌਨ ਡੋ",
+        "email": "doctor@hospital.com",
+        "specialisation": "ਕਾਰਡੀਓਲੋਜੀ, ਨਿਊਰੋਲੋਜੀ, ਆਦਿ",
+        "start": "9",
+        "end": "17"
+      },
+      "buttons": {
+        "adding": "ਜੋੜਿਆ ਜਾ ਰਿਹਾ ਹੈ...",
+        "addDoctor": "ਡਾਕਟਰ ਜੋੜੋ",
+        "cancel": "ਰੱਦ ਕਰੋ"
+      },
+      "errors": {
+        "nameRequired": "ਨਾਮ ਲਾਜ਼ਮੀ ਹੈ",
+        "emailRequired": "ਈਮੇਲ ਲਾਜ਼ਮੀ ਹੈ",
+        "emailInvalid": "ਕਿਰਪਾ ਕਰਕੇ ਵੈਧ ਈਮੇਲ ਪਤਾ ਦਰਜ ਕਰੋ",
+        "specialisationRequired": "ਵਿਸ਼ੇਸ਼ਤਾ ਲਾਜ਼ਮੀ ਹੈ",
+        "startRange": "ਸ਼ੁਰੂ ਸਮਾਂ 0 ਤੋਂ 23 ਦੇ ਵਿਚਕਾਰ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
+        "endRange": "ਖਤਮ ਸਮਾਂ 0 ਤੋਂ 23 ਦੇ ਵਿਚਕਾਰ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
+        "startBeforeEnd": "ਸ਼ੁਰੂ ਸਮਾਂ ਖਤਮ ਸਮੇਂ ਤੋਂ ਪਹਿਲਾਂ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
+        "fixForm": "ਕਿਰਪਾ ਕਰਕੇ ਫਾਰਮ ਦੀਆਂ ਗਲਤੀਆਂ ਠੀਕ ਕਰੋ"
+      },
+      "toasts": {
+        "success": "ਡਾਕਟਰ ਸਫਲਤਾਪੂਰਵਕ ਜੋੜਿਆ ਗਿਆ!",
+        "failed": "ਡਾਕਟਰ ਜੋੜਣਾ ਅਸਫਲ ਰਿਹਾ"
+      }
+    },
+    "edit": {
+      "title": "ਡਾਕਟਰ ਸੰਪਾਦਿਤ ਕਰੋ",
+      "subtitle": "ਸਿਸਟਮ ਵਿੱਚ ਡਾਕਟਰ ਦੀ ਜਾਣਕਾਰੀ ਅੱਪਡੇਟ ਕਰੋ",
+      "fields": {
+        "fullName": "ਪੂਰਾ ਨਾਮ",
+        "email": "ਈਮੇਲ ਪਤਾ",
+        "specialisation": "ਵਿਸ਼ੇਸ਼ਤਾ",
+        "shiftStart": "ਸ਼ਿਫਟ ਸ਼ੁਰੂ (24 ਘੰਟੇ)",
+        "shiftEnd": "ਸ਼ਿਫਟ ਖਤਮ (24 ਘੰਟੇ)",
+        "isActive": "ਡਾਕਟਰ ਵਰਤਮਾਨ ਵਿੱਚ ਸਕਰੀਅ ਹੈ"
+      },
+      "placeholders": {
+        "name": "ਡਾ. ਜੌਨ ਡੋ",
+        "email": "doctor@hospital.com",
+        "specialisation": "ਕਾਰਡੀਓਲੋਜੀ, ਨਿਊਰੋਲੋਜੀ, ਆਦਿ",
+        "start": "9",
+        "end": "17"
+      },
+      "buttons": {
+        "update": "ਡਾਕਟਰ ਅੱਪਡੇਟ ਕਰੋ",
+        "cancel": "ਰੱਦ ਕਰੋ",
+        "updating": "ਅੱਪਡੇਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
+      },
+      "toasts": {
+        "success": "ਡਾਕਟਰ ਸਫਲਤਾਪੂਰਵਕ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ!",
+        "failed": "ਡਾਕਟਰ ਅੱਪਡੇਟ ਅਸਫਲ ਰਿਹਾ",
+        "error": "ਡਾਕਟਰ ਨੂੰ ਅੱਪਡੇਟ ਕਰਦੇ ਸਮੇਂ ਗਲਤੀ ਆਈ"
+      }
+    }
+  }
+  ,
+  "adminAppointments": {
+    "title": "ਸਾਰੀਆਂ ਮਿਲਣੀਆਂ",
+    "subtitle": "ਆਪਣੇ ਹਸਪਤਾਲ ਵਿੱਚ ਮਰੀਜ਼ਾਂ ਦੀਆਂ ਮਿਲਣੀਆਂ ਵੇਖੋ ਅਤੇ ਪ੍ਰਬੰਧ ਕਰੋ",
+    "filters": {
+      "status": {
+        "all": "ਸਾਰੀਆਂ ਸਥਿਤੀਆਂ",
+        "confirmed": "ਪੁਸ਼ਟੀਤ",
+        "pending": "ਬਕਾਇਆ",
+        "cancelled": "ਰੱਦ"
+      }
+    },
+    "empty": {
+      "title": "ਅਜੇ ਤੱਕ ਕੋਈ ਮਿਲਣੀ ਨਹੀਂ",
+      "subtitle": "ਮਰੀਜ਼ਾਂ ਦੁਆਰਾ ਬਣਾਈਆਂ ਮਿਲਣੀਆਂ ਇੱਥੇ ਵਿਖਾਈਆਂ ਜਾਣਗੀਆਂ।"
+    },
+    "table": {
+      "patient": "ਮਰੀਜ਼",
+      "doctor": "ਡਾਕਟਰ",
+      "time": "ਸਮਾਂ",
+      "status": "ਸਥਿਤੀ",
+      "actions": "ਕਾਰਵਾਈਆਂ"
+    }
+  }
+}

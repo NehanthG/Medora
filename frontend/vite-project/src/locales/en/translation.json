@@ -1,0 +1,582 @@
+{
+  "brand": "VitalsHub",
+  "brandPharmacy": "VitalsHub - Pharmacy",
+  "loading": "Loading...",
+  "nav": {
+    "home": "Home",
+    "quickAsk": "Quick Ask",
+    "appointments": "My Appointments",
+    "medicalRecords": "Medical Records",
+    "pharmacy": "Medicine & Pharmacy",
+    "myProfile": "My Profile",
+    "logout": "Logout"
+  },
+  "chatbot": {
+    "initialMessage": "Hello! I'm your Health Assistant. I can help you find a doctor, check appointments, or answer health and medicine questions.",
+    "headerTitle": "Ask me about your health queries",
+    "sessionId": "Session ID",
+    "inputPlaceholder": "Ask me about hospital hours, doctors, or medicine...",
+    "sending": "Sending...",
+    "send": "Send",
+    "thinking": "Thinking..."
+  },
+  "pharmacies": {
+    "title": "All Pharmacies",
+    "subtitle": "Find medicines at your nearest pharmacy",
+    "searchPlaceholder": "Search pharmacy...",
+    "search": "Search",
+    "viewMedicines": "View Medicines",
+    "errors": {
+      "loadFailed": "Failed to load pharmacies. Please try again later.",
+      "searchFailed": "Failed to search pharmacies. Please try again."
+    }
+  },
+  "addDocs": {
+    "title": "My Documents",
+    "subtitle": "Manage your medical documents with ease and security.",
+    "dragDrop": "Drag and drop files here",
+    "browse": "or click to browse",
+    "form": {
+      "titlePlaceholder": "Enter Title"
+    },
+    "buttons": {
+      "uploading": "Uploading...",
+      "upload": "Upload Document",
+      "view": "View",
+      "download": "Download",
+      "delete": "Delete"
+    },
+    "uploadedTitle": "Uploaded Documents",
+    "table": {
+      "name": "Document Name",
+      "date": "Upload Date",
+      "type": "File Type",
+      "actions": "Actions"
+    },
+    "fileTypes": {
+      "pdf": "PDF",
+      "image": "Image"
+    },
+    "empty": "No files uploaded yet",
+    "toasts": {
+      "fetchError": "Error in fetching documents",
+      "deleteSuccess": "Document deleted successfully",
+      "deleteError": "Error in deleting document",
+      "requiredFields": "All fields are required"
+    }
+  },
+  "pharmacy": {
+    "backToPharmacies": "Back to Pharmacies",
+    "availableMedicines": "Available Medicines",
+    "searchPlaceholder": "Search medicines...",
+    "noMedicines": "No medicines found",
+    "tryAdjust": "Try adjusting your search terms",
+    "stock": "Stock: {{count}} units",
+    "viewDetails": "View Details",
+    "errors": {
+      "loadFailed": "Failed to load pharmacy details. Please try again later."
+    }
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "hi": "Hindi",
+    "pa": "Punjabi",
+    "te": "Telugu"
+  },
+  "admin": {
+    "allDoctors": "All Doctors"
+  },
+  "homepage": {
+    "welcomeBack": "Welcome back!",
+    "welcomeBackName": "Welcome back, {{name}}!",
+    "summary": "Here's a summary of your recent activity and quick access to common tasks.",
+    "quickActions": "Quick Actions",
+    "scheduleAppointment": {
+      "title": "Schedule Appointment",
+      "subtitle": "Book a consultation with a doctor"
+    },
+    "medicalRecords": {
+      "title": "Medical Records",
+      "subtitle": "View your health documents"
+    },
+    "recentActivity": "Recent Activity",
+    "upcomingAppointment": "Upcoming Appointment",
+    "appointmentWith": "Appointment with {{doctor}}",
+    "recentMedicalRecords": "Recent Medical Records",
+    "checkupResults": "Checkup results from {{monthYear}}",
+    "addDocuments": "Add Documents"
+  },
+  "login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "loggingIn": "Logging In...",
+    "login": "Login",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign Up"
+  },
+  "signup": {
+    "title": "Sign Up",
+    "fullName": "Full Name",
+    "email": "Email",
+    "password": "Password",
+    "phoneNumber": "Phone Number",
+    "dateOfBirth": "Date of Birth",
+    "signingUp": "Signing Up...",
+    "signUp": "Sign Up",
+    "haveAccount": "Already have an account?",
+    "login": "Login",
+    "errors": {
+      "required": "All fields are required",
+      "passwordLength": "Password must be at least 6 characters long",
+      "phoneLength": "Phone number must be 10 digits long",
+      "invalidEmail": "Invalid email format"
+    }
+  },
+  "singleLogin": {
+    "header": {
+      "title": "Welcome to {{brand}}",
+      "subtitle": "Select your login type and enter credentials"
+    },
+    "chooseType": "Choose Login Type",
+    "types": {
+      "user": {
+        "title": "Patient Login",
+        "description": "Access your medical records and book appointments"
+      },
+      "admin": {
+        "title": "Admin Login",
+        "description": "Manage hospitals, doctors and system operations"
+      },
+      "pharmacy": {
+        "title": "Pharmacy Login",
+        "description": "Manage prescriptions and inventory"
+      }
+    },
+    "links": {
+      "forgotPassword": "Forgot Password?",
+      "needHelp": "Need Help?"
+    }
+  },
+  "profile": {
+    "title": "My Profile",
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "phoneNumber": "Phone Number",
+    "dateOfBirth": "Date of Birth",
+    "saveChanges": "Save Changes"
+  },
+  "specialisations": {
+    "Cardiologist": "Cardiologist",
+    "Dermatologist": "Dermatologist",
+    "Neurologist": "Neurologist",
+    "Orthopedic": "Orthopedic",
+    "Pediatrician": "Pediatrician",
+    "General Physician": "General Physician",
+    "ENT": "ENT",
+    "Ophthalmologist": "Ophthalmologist",
+    "Oncologist": "Oncologist",
+    "Gynecologist": "Gynecologist",
+    "Dentist": "Dentist",
+    "Psychiatrist": "Psychiatrist",
+    "Radiologist": "Radiologist"
+  },
+  "medicalRecords": {
+    "title": "Medical Records",
+    "table": {
+      "title": "Title",
+      "dateUploaded": "Date Uploaded",
+      "type": "Type",
+      "actions": "Actions"
+    },
+    "empty": "No medical records found.",
+    "type": {
+      "pdf": "PDF",
+      "image": "Image"
+    },
+    "actions": {
+      "view": "View",
+      "download": "Download"
+    }
+  },
+  "appointments": {
+    "title": "My Appointments",
+    "timeLabel": "Time:",
+    "statusLabel": "Status:",
+    "status": {
+      "Confirmed": "Confirmed",
+      "Pending": "Pending",
+      "Cancelled": "Cancelled"
+    },
+    "empty": "No appointments found."
+  },
+  "createAppointment": {
+    "back": "← Back to Doctors",
+    "title": "Book Appointment",
+    "subtitle": "Fill in the details to book your appointment",
+    "selectedHospital": "Selected Hospital",
+    "selectedDoctor": "Selected Doctor",
+    "errors": {
+      "notSelected": "Please select a doctor first",
+      "required": "All fields are required",
+      "failed": "Appointment booking failed. Please try again.",
+      "unexpected": "An unexpected error occurred"
+    },
+    "form": {
+      "appointmentDateTime": "Appointment Date & Time *",
+      "descriptionLabel": "Description / Symptoms *",
+      "descriptionPlaceholder": "Describe your symptoms or reason for appointment...",
+      "emergencyLabel": "This is an emergency appointment"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "booking": "Booking...",
+      "bookAppointment": "Book Appointment"
+    },
+    "toast": {
+      "title": "Appointment Confirmed ",
+      "justNow": "Just now",
+      "body": "Your appointment with Dr. {{doctor}} on {{dateTime}} has been booked successfully!"
+    }
+  },
+  "hospitals": {
+    "loading": "Loading hospitals...",
+    "emptyTitle": "No Hospitals Found",
+    "emptySubtitle": "There are currently no hospitals available in our network.",
+    "tryAgain": "Try Again",
+    "headerTitle": "Available Hospitals",
+    "headerSubtitle": "Choose a hospital below to view available doctors and book your appointment.",
+    "stats": {
+      "hospitalsAvailable": "Hospitals Available",
+      "emergencyCare": "Emergency Care",
+      "expertDoctors": "Expert Doctors"
+    },
+    "networkTitle": "Hospital Network",
+    "tags": {
+      "emergencyCare": "Emergency Care",
+      "surgery": "Surgery",
+      "diagnostics": "Diagnostics"
+    },
+    "actions": {
+      "viewDoctors": "View Doctors"
+    },
+    "availableNow": "Available Now",
+    "quickBooking": "Quick Booking ⚡",
+    "summary": "Found {{count}} hospital{{plural}} available for appointments"
+  },
+  "doctors": {
+    "backToHospitals": "Back to Hospitals",
+    "loading": "Loading doctors...",
+    "noDoctorsTitle": "No Doctors Found",
+    "noDoctorsSubtitle": "No doctors are currently available at {{hospital}}.",
+    "headerTitle": "Available Doctors",
+    "headerSubtitle": "Select a doctor from {{hospital}} to book your appointment.",
+    "stats": {
+      "doctorsAvailable": "Doctors Available",
+      "currentlyAvailable": "Currently Available",
+      "specializations": "Specializations"
+    },
+    "gridTitle": "Medical Staff",
+    "status": {
+      "availableNow": "Available Now",
+      "currentlyUnavailable": "Currently Unavailable"
+    },
+    "actions": {
+      "bookAppointment": "Book Appointment"
+    },
+    "summary": "Found {{count}} doctor{{plural}} at {{hospital}}"
+  }
+  ,
+  "adminLogin": {
+    "title": "Admin Login",
+    "subtitle": "Sign in to your hospital admin account",
+    "fields": {
+      "hospitalId": "Hospital ID",
+      "hospitalIdPlaceholder": "Enter your hospital ID",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password"
+    },
+    "buttons": {
+      "signingIn": "Signing in...",
+      "signIn": "Sign in"
+    },
+    "errors": {
+      "fillAllFields": "Please fill in all fields",
+      "loginFailed": "Login failed. Please try again.",
+      "unexpected": "An unexpected error occurred"
+    },
+    "links": {
+      "noAccount": "Don't have an account?",
+      "registerHere": "Register here"
+    }
+  },
+  "pharmacyLogin": {
+    "title": "Pharmacy Login",
+    "subtitle": "Enter your credentials to access your account",
+    "fields": {
+      "licenseNumber": "License Number",
+      "licenseNumberPlaceholder": "Enter your license number",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password"
+    },
+    "buttons": {
+      "loggingIn": "Logging in...",
+      "login": "Login"
+    },
+    "links": {
+      "noAccount": "Don’t have an account?",
+      "register": "Register"
+    },
+    "toasts": {
+      "success": "Login Successful",
+      "invalid": "Invalid Credentials"
+    }
+  },
+  "adminRegister": {
+    "title": "Admin Registration",
+    "subtitle": "Register your hospital admin account",
+    "fields": {
+      "hospitalId": "Hospital ID",
+      "hospitalIdPlaceholder": "Enter hospital ID",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter email address",
+      "address": "Hospital Address",
+      "addressPlaceholder": "Enter hospital address",
+      "password": "Password",
+      "passwordPlaceholder": "Min. 6 characters"
+    },
+    "buttons": {
+      "registering": "Registering...",
+      "register": "Register"
+    },
+    "links": {
+      "haveAccount": "Already have an account?",
+      "loginHere": "Login here"
+    },
+    "errors": {
+      "required": "All fields are required",
+      "passwordLength": "Password must be at least 6 characters long",
+      "invalidEmail": "Invalid email format",
+      "failed": "Registration failed. Please try again.",
+      "unexpected": "An unexpected error occurred"
+    },
+    "toasts": {
+      "success": "Registration successful! Please login."
+    }
+  },
+  "pharmacySignup": {
+    "title": "Register Your Pharmacy",
+    "subtitle": "Fill in the details to create your pharmacy account",
+    "sections": {
+      "generalInfo": "General Information",
+      "addressDetails": "Address Details",
+      "contactAccount": "Contact & Account Details",
+      "pharmacistDetails": "Pharmacist Details"
+    },
+    "fields": {
+      "name": "Pharmacy Name",
+      "licenseNumber": "License Number",
+      "address": "Street Address",
+      "district": "District",
+      "state": "State",
+      "pincode": "Pincode",
+      "contactNumber": "Contact Number",
+      "email": "Email Address",
+      "password": "Password",
+      "workingTimings": "Working Hours",
+      "workingTimingsPlaceholder": "e.g. 9:00 AM - 9:00 PM",
+      "pharmacistName": "Pharmacist Name",
+      "pharmacistId": "Pharmacist ID",
+      "pharmacistQualification": "Pharmacist Qualification"
+    },
+    "buttons": {
+      "creating": "Creating Account...",
+      "create": "Create Account"
+    },
+    "links": {
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "toasts": {
+      "success": "Pharmacy Registered Successfully",
+      "failed": "Registration Failed"
+    }
+  }
+  ,
+  "adminDashboard": {
+    "welcome": "Welcome back, Admin!",
+    "hospitalId": "Hospital ID: {{id}}",
+    "notAssigned": "Not assigned",
+    "quickActions": "Quick Actions",
+    "cards": {
+      "manageDoctors": {
+        "title": "Manage Doctors",
+        "subtitle": "Add, edit, or remove doctors from your hospital."
+      },
+      "viewAppointments": {
+        "title": "View Appointments",
+        "subtitle": "Monitor and manage patient appointments."
+      },
+      "patientRecords": {
+        "title": "Patient Records",
+        "subtitle": "Access and manage patient information."
+      },
+      "settings": {
+        "title": "Settings",
+        "subtitle": "Configure hospital and system settings."
+      }
+    }
+  }
+  ,
+  "pharmacyDashboard": {
+    "loading": "Loading pharmacy data...",
+    "welcome": "Welcome, {{name}}",
+    "subtitle": "Manage your pharmacy's medicines and inventory",
+    "actions": {
+      "addNewMedicine": "Add New Medicine",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "empty": {
+      "title": "No medicines in inventory",
+      "subtitle": "Start by adding medicines to your pharmacy inventory"
+    },
+    "badges": {
+      "inStock": "In Stock",
+      "outOfStock": "Out of Stock"
+    },
+    "fields": {
+      "manufacturer": "Manufacturer",
+      "batchNumber": "Batch Number",
+      "price": "Price",
+      "stock": "Stock"
+    },
+    "units": "units"
+  }
+  ,
+  "adminDoctors": {
+    "common": {
+      "email": "Email",
+      "shift": "Shift",
+      "status": "Status",
+      "active": "Active",
+      "inactive": "Inactive",
+      "appointments": "Appointments",
+      "hospitalId": "Hospital ID",
+      "unknown": "Unknown"
+    },
+    "actions": {
+      "view": "View",
+      "edit": "Edit",
+      "delete": "Delete",
+      "addDoctor": "Add Doctor"
+    },
+    "confirmDelete": "Are you sure you want to delete this doctor?",
+    "list": {
+      "title": "All Doctors",
+      "hospital": "Hospital: {{id}}",
+      "addNewDoctor": "Add New Doctor"
+    },
+    "empty": {
+      "title": "No doctors found",
+      "subtitle": "Get started by adding your first doctor."
+    },
+    "modal": {
+      "title": "Doctor Details",
+      "editDoctor": "Edit Doctor",
+      "close": "Close"
+    },
+    "add": {
+      "title": "Add New Doctor",
+      "subtitle": "Fill in the doctor's information to add them to the system",
+      "fields": {
+        "fullName": "Full Name",
+        "email": "Email Address",
+        "specialisation": "Specialisation",
+        "shiftStart": "Shift Start (24hr)",
+        "shiftEnd": "Shift End (24hr)",
+        "isActive": "Doctor is currently active"
+      },
+      "placeholders": {
+        "name": "Dr. John Doe",
+        "email": "doctor@hospital.com",
+        "specialisation": "Cardiology, Neurology, etc.",
+        "start": "9",
+        "end": "17"
+      },
+      "buttons": {
+        "adding": "Adding...",
+        "addDoctor": "Add Doctor",
+        "cancel": "Cancel"
+      },
+      "errors": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "specialisationRequired": "Specialisation is required",
+        "startRange": "Start time must be between 0 and 23",
+        "endRange": "End time must be between 0 and 23",
+        "startBeforeEnd": "Start time must be before end time",
+        "fixForm": "Please fix the form errors"
+      },
+      "toasts": {
+        "success": "Doctor added successfully!",
+        "failed": "Failed to add doctor"
+      }
+    },
+    "edit": {
+      "title": "Edit Doctor",
+      "subtitle": "Update doctor's information in the system",
+      "fields": {
+        "fullName": "Full Name",
+        "email": "Email Address",
+        "specialisation": "Specialisation",
+        "shiftStart": "Shift Start (24hr)",
+        "shiftEnd": "Shift End (24hr)",
+        "isActive": "Doctor is currently active"
+      },
+      "placeholders": {
+        "name": "Dr. John Doe",
+        "email": "doctor@hospital.com",
+        "specialisation": "Cardiology, Neurology, etc.",
+        "start": "9",
+        "end": "17"
+      },
+      "buttons": {
+        "update": "Update Doctor",
+        "cancel": "Cancel",
+        "updating": "Updating..."
+      },
+      "toasts": {
+        "success": "Doctor updated successfully!",
+        "failed": "Failed to update doctor",
+        "error": "An error occurred while updating the doctor"
+      }
+    }
+  }
+  ,
+  "adminAppointments": {
+    "title": "All Appointments",
+    "subtitle": "View and manage patient appointments across your hospital",
+    "filters": {
+      "status": {
+        "all": "All Statuses",
+        "confirmed": "Confirmed",
+        "pending": "Pending",
+        "cancelled": "Cancelled"
+      }
+    },
+    "empty": {
+      "title": "No appointments yet",
+      "subtitle": "Appointments created by patients will appear here."
+    },
+    "table": {
+      "patient": "Patient",
+      "doctor": "Doctor",
+      "time": "Time",
+      "status": "Status",
+      "actions": "Actions"
+    }
+  }
+}

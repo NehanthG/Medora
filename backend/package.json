@@ -1,0 +1,40 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run start\" \"npm run start:chatbot\"",
+    "start": "node src/index.js",
+    "start:chatbot": "cd src/chatbot && uvicorn api:app --reload --port 5002"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@huggingface/inference": "^4.8.0",
+    "@langchain/community": "^0.3.56",
+    "@langchain/core": "^0.3.76",
+    "@langchain/groq": "^0.2.4",
+    "@langchain/mongodb": "^0.1.0",
+    "axios": "^1.12.2",
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.7.0",
+    "concurrently": "^8.2.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "langchain": "^0.3.34",
+    "mongodb": "^6.19.0",
+    "mongoose": "^8.18.1",
+    "multer": "^2.0.2",
+    "react-hot-toast": "^2.6.0",
+    "twilio": "^5.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
