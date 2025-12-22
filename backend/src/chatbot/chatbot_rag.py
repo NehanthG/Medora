@@ -18,8 +18,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# --- FIX 1: Correctly retrieve OPENAI_API_KEY from environment ---
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# --- FIX 1: Correctly retrieve open_api from environment ---
+open_api = os.getenv("OPENAI_API_KEY")
 
 # ------------------------------------------------------------------
 # 1. ENVIRONMENT & GLOBALS
@@ -768,7 +768,7 @@ def create_hospital_rag_system():
             text_key="text",
             embedding_key="embeddings",
         )
-        llm = ChatOpenAI(model="gpt-4o-mini", api_key=OPENAI_API_KEY)
+        llm = ChatOpenAI(model="gpt-4o-mini", api_key=open_api)
         qa_chain = ConversationalRetrievalChain.from_llm(
             llm=llm,
             retriever=vectorstore.as_retriever(search_kwargs={"k": 3}),
@@ -805,7 +805,7 @@ def create_pharmacy_rag_system():
             text_key="text",
             embedding_key="embeddings",
         )
-        llm = ChatOpenAI(model="gpt-4o-mini", api_key=OPENAI_API_KEY)
+        llm = ChatOpenAI(model="gpt-4o-mini", api_key=open_api)
         qa_chain = ConversationalRetrievalChain.from_llm(
             llm=llm,
             retriever=vectorstore.as_retriever(search_kwargs={"k": 3}),
