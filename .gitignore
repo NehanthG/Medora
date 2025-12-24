@@ -1,0 +1,60 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+# build outputs
+dist/
+build/
+coverage/
+
+# Environment files
+.env
+.env.*
+.env.local
+/backend/.env
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+venv/
+ENV/
+.env-venv/
+.venv/
+
+# Misc
+*.sqlite3
+*.tgz
+*.swp
+*.swo
+
+# Frontend specific
+/frontend/vite-project/dist/
+/frontend/vite-project/node_modules/
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Ignore generated certs or secrets
+Certificates/
+secrets/
+
+# Keep package lockfiles in repo (do not ignore package-lock.json or yarn.lock) - remove below if you prefer to ignore
+
+# End of .gitignore
