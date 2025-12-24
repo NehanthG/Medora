@@ -13,6 +13,10 @@ export const useAuthStore = create((set) => ({
   isUpdatingProfile: false,
   isAddingDoc: false,
   isLoading: false,
+  last7BpReadings: null,
+  last7SugarReadings: null,
+  last30BpReadings: null,
+  last30SugarReadings: null,
 
   checkAuth: async () => {
     try {
@@ -199,6 +203,104 @@ Thank you for choosing VitalsHub! `,
       toast.error(error.response?.data?.message || "Failed to fetch doctors");
       set({ hospitalDoctors: [] });
       return { success: false };
+    } finally {
+      set({ isLoading: false });
+    }
+  },
+
+  get7BpReadings: async (userID) => {
+    set({ isLoading: true });
+    try {
+      const url = `/vitals/${userID}/7Bp`;
+      console.log("GET 7Bp ->", url);
+      const res = await axiosInstance.get(url);
+      console.log("GET 7Bp response:", res.data);
+      set({ last7BpReadings: res.data.data || res.data });
+      return { success: true, data: res.data.data || res.data };
+    } catch (error) {
+      console.error(
+        "Error fetching 7Bp readings:",
+        error?.response?.data || error.message
+      );
+      toast.error(
+        error.response?.data?.message ||
+          error.message ||
+          "Failed to fetch readings"
+      );
+      return { success: false, error: error?.response?.data || error.message };
+    } finally {
+      set({ isLoading: false });
+    }
+  },
+
+  get7SugarReadings: async (userID) => {
+    set({ isLoading: true });
+    try {
+      const url = `/vitals/${userID}/7sugar`;
+      console.log("GET 7Sugar ->", url);
+      const res = await axiosInstance.get(url);
+      console.log("GET 7Sugar response:", res.data);
+      set({ last7SugarReadings: res.data.data || res.data });
+      return { success: true, data: res.data.data || res.data };
+    } catch (error) {
+      console.error(
+        "Error fetching 7Sugar readings:",
+        error?.response?.data || error.message
+      );
+      toast.error(
+        error.response?.data?.message ||
+          error.message ||
+          "Failed to fetch readings"
+      );
+      return { success: false, error: error?.response?.data || error.message };
+    } finally {
+      set({ isLoading: false });
+    }
+  },
+  get30SugarReadings: async (userID) => {
+    set({ isLoading: true });
+    try {
+      const url = `/vitals/${userID}/30sugar`;
+      console.log("GET 30Sugar ->", url);
+      const res = await axiosInstance.get(url);
+      console.log("GET 30Sugar response:", res.data);
+      set({ last30SugarReadings: res.data.data || res.data });
+      return { success: true, data: res.data.data || res.data };
+    } catch (error) {
+      console.error(
+        "Error fetching 30Sugar readings:",
+        error?.response?.data || error.message
+      );
+      toast.error(
+        error.response?.data?.message ||
+          error.message ||
+          "Failed to fetch readings"
+      );
+      return { success: false, error: error?.response?.data || error.message };
+    } finally {
+      set({ isLoading: false });
+    }
+  },
+  get30BpReadings: async (userID) => {
+    set({ isLoading: true });
+    try {
+      const url = `/vitals/${userID}/30Bp`;
+      console.log("GET 30Bp ->", url);
+      const res = await axiosInstance.get(url);
+      console.log("GET 30Bp response:", res.data);
+      set({ last30BpReadings: res.data.data || res.data });
+      return { success: true, data: res.data.data || res.data };
+    } catch (error) {
+      console.error(
+        "Error fetching 30Bp readings:",
+        error?.response?.data || error.message
+      );
+      toast.error(
+        error.response?.data?.message ||
+          error.message ||
+          "Failed to fetch readings"
+      );
+      return { success: false, error: error?.response?.data || error.message };
     } finally {
       set({ isLoading: false });
     }

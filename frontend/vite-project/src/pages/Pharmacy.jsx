@@ -24,6 +24,7 @@ export default function Pharmacy() {
                 setMedicines(response.data.data.medicines);
             } catch (error) {
                 setError(t('pharmacy.errors.loadFailed'));
+                console.log(error);
             } finally {
                 setIsLoading(false);
             }
