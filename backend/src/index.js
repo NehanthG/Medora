@@ -66,6 +66,7 @@ app.use("/api/chatbot", chatbotRoutes); // Add chatbot routes
 app.use("/api/pharmacy", pharmacyRoutes);
 app.use("/api/user/pharmacy", userPharmacyRoutes);
 app.use("/api/vitals", userVitalsLogRoutes);
+// vitals routes are mounted at /api/vitals
 
 app.get("/", (req, res) => {
   res.send("Hellow World");

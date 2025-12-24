@@ -37,6 +37,7 @@ import PharmacyAddMedicine from "./pages/pharmaciesAdmin/PharmacyAddMedicine";
 import PharmacyEditMed from "./pages/pharmaciesAdmin/PharmacyEditMed";
 import AllAppointments from "./pages/AllAppointments";
 import { useTranslation } from 'react-i18next';
+import VitalLogging from "./pages/VitalLogging";
 
 function App() {
   const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
@@ -89,6 +90,7 @@ function App() {
         <Route path="/pharmacy/:id" element={<Pharmacy />} />
         <Route path="/appointments" element={<AllAppointments />} />
 
+        <Route path="/logVitals" element={<VitalLogging />} />
         <Route path="/admin/*">
           <Route index element={<AdminLoginPage />} />
           <Route path="login" element={<AdminLoginPage />} />
