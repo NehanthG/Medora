@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useAuthStore } from '../stores/useAuthStore'
-import { CalendarDays, FolderOpen, Upload, Bell } from "lucide-react";
+import { CalendarDays, FolderOpen, Upload, Bell, Activity } from "lucide-react";
 import { useTranslation } from 'react-i18next';
 
 
@@ -51,7 +51,7 @@ export default function HomePage() {
         <div className="mb-5">
           <h5 className="fw-bold mb-3" style={{ color: "#2d3748" }}>{t('homepage.quickActions')}</h5>
           <div className="row g-3">
-            <div className="col-md-6">
+            <div className="col-md-4">
               <Link
                 to="/hospitals"
                 className="card border-0 text-decoration-none h-100"
@@ -74,7 +74,7 @@ export default function HomePage() {
                 </div>
               </Link>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-4">
               <Link
                 to="/medical-records"
                 className="card border-0 text-decoration-none h-100"
@@ -93,6 +93,30 @@ export default function HomePage() {
                     <h6 className="fw-bold mb-1" style={{ color: "#2d3748" }}>{t('homepage.medicalRecords.title')}</h6>
                     <p className="mb-0 text-secondary" style={{ fontSize: "0.9rem" }}>
                       {t('homepage.medicalRecords.subtitle')}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="col-md-4">
+              <Link
+                to="/logVitals"
+                className="card border-0 text-decoration-none h-100"
+                style={{ 
+                  background: "white",
+                  borderRadius: "12px",
+                  transition: "transform 0.2s ease",
+                  boxShadow: "0 1px 3px rgba(0,0,0,0.05)"
+                }}
+                onMouseEnter={e => e.currentTarget.style.transform = "translateY(-2px)"}
+                onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
+              >
+                <div className="card-body d-flex align-items-center p-4">
+                  <Activity size={24} className="text-danger me-3" />
+                  <div>
+                    <h6 className="fw-bold mb-1" style={{ color: "#2d3748" }}>{t('homepage.logVitals.title')}</h6>
+                    <p className="mb-0 text-secondary" style={{ fontSize: "0.9rem" }}>
+                      {t('homepage.logVitals.subtitle')}
                     </p>
                   </div>
                 </div>
@@ -159,7 +183,19 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="text-end">
+        <div className="text-end d-flex justify-content-end gap-2">
+          <Link
+            to="/logVitals"
+            className="btn btn-outline-danger d-inline-flex align-items-center"
+            style={{ 
+              borderRadius: "8px", 
+              padding: "12px 24px",
+              transition: "all 0.2s ease"
+            }}
+          >
+            <Activity size={18} className="me-2" />
+            {t('homepage.logVitals.title')}
+          </Link>
           <Link
             to="/addDocs"
             className="btn btn-outline-primary d-inline-flex align-items-center"

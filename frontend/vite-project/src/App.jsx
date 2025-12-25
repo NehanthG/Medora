@@ -42,6 +42,7 @@ import PharmacyAddMedicine from "./pages/pharmaciesAdmin/PharmacyAddMedicine";
 import PharmacyEditMed from "./pages/pharmaciesAdmin/PharmacyEditMed";
 import AllAppointments from "./pages/AllAppointments";
 import AppointmentPage from "./pages/AppointmentPage";
+import VitalLogging from "./pages/VitalLogging";
 import { useTranslation } from 'react-i18next';
 
 function App() {
@@ -99,6 +100,7 @@ function App() {
         <Route path="/allPharmacies" element={<AllPharmacies />} />
         <Route path="/pharmacy/:id" element={<Pharmacy />} />
         <Route path="/appointments" element={<AllAppointments />} />
+        <Route path="/logVitals" element={<VitalLogging />} />
 
         <Route path="/admin/*">
           <Route index element={<AdminLoginPage />} />
