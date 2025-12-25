@@ -17,7 +17,8 @@ pnpm-debug.log*
 .env
 .env.local
 .env.*.local
-./backend/.env
+/backend/.env
+**/.env
 # Mac
 .DS_Store
 
