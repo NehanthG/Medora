@@ -123,9 +123,6 @@ Quick pre-check list
 
 
 ---
-
-### 📌 Final correct block (for your reference)
-
 ```mermaid
 flowchart LR
   U["User (Browser / Mobile)"]
@@ -151,9 +148,6 @@ flowchart LR
   B -->|responses| F
   F -->|render| U
 
-
-
-Plain-English walkthrough (step-by-step)
 
 1. A person opens the frontend and interacts with the UI (searches, requests an appointment, or asks a question).
 2. The frontend calls the backend API endpoints (routes defined under `backend/routes/`).
