@@ -9,6 +9,14 @@ export const logVitals = async (req, res) => {
     // expect userID as a path param: /user/:userID/vitals
     const { userID } = req.params;
     const { type } = req.body;
+    console.log(
+      "logVitals called for user:",
+      userID,
+      "type:",
+      type,
+      "body:",
+      req.body
+    );
 
     if (!userID || !mongoose.Types.ObjectId.isValid(userID)) {
       return res

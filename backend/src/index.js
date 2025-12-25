@@ -17,6 +17,7 @@ import chatbotRoutes from "./routes/chatbot.routes.js";
 import pharmacyRoutes from "./routes/pharmacy.routes.js";
 import userPharmacyRoutes from "./routes/userPharamcy.routes.js";
 import doctorAuthRoutes from "./routes/doctor.auth.routes.js";
+import userVitalsRoutes from "./routes/userVitals.js";
 
 // DB
 import { connectDB } from "./lib/db.js";
@@ -55,6 +56,7 @@ app.use("/api/chatbot", chatbotRoutes);
 app.use("/api/pharmacy", pharmacyRoutes);
 app.use("/api/user/pharmacy", userPharmacyRoutes);
 app.use("/api/doctor", doctorAuthRoutes);
+app.use("/api/vitals", userVitalsRoutes);
 
 /* -------------------- Chat (RAG API) -------------------- */
 app.post("/api/chat", async (req, res) => {
