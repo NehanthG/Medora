@@ -3,6 +3,8 @@ import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { axiosInstance } from "../lib/axios";
 import { useAuthStore } from "../stores/useAuthStore";
+import AISummaryButton from "../components/AIInsights/AISummaryButton";
+import AISummaryModal from "../components/AIInsights/AISummaryModal";
 
 export default function VitalLogging() {
   const {
@@ -25,6 +27,7 @@ export default function VitalLogging() {
     sugarType: "",
     sugarValue: "",
   });
+  const [showAIModal, setShowAIModal] = useState(false);
 
   const handleBpLog = async (e) => {
     e.preventDefault();
@@ -194,14 +197,32 @@ export default function VitalLogging() {
     return { status: "Diabetes", range: ">=200 mg/dL" };
   };
 
-  const statusStyle = (status) => {
-    if (!status) return {};
-    if (status.includes("Normal")) return { color: "green", fontWeight: 600 };
-    if (status.includes("Elevated") || status.includes("Prediabetes"))
-      return { color: "orange", fontWeight: 700 };
-    if (status.includes("Hypertension") || status.includes("Diabetes"))
-      return { color: "red", fontWeight: 800 };
-    return { color: "gray" };
+  const statusBadge = (status) => {
+    if (!status) return null;
+    let bgClass = "bg-secondary";
+    if (status.includes("Normal"))
+      bgClass = "bg-success-subtle text-success border border-success-subtle";
+    else if (status.includes("Elevated") || status.includes("Prediabetes"))
+      bgClass =
+        "bg-warning-subtle text-warning-emphasis border border-warning-subtle";
+    else if (status.includes("Hypertension") || status.includes("Diabetes"))
+      bgClass = "bg-danger-subtle text-danger border border-danger-subtle";
+
+    return (
+      <span
+        className={`badge ${bgClass}`}
+        style={{
+          padding: "6px 12px",
+          borderRadius: "20px",
+          fontSize: "0.75rem",
+          fontWeight: "600",
+          textTransform: "uppercase",
+          letterSpacing: "0.5px",
+        }}
+      >
+        {status}
+      </span>
+    );
   };
 
   const formatDate = (d) => {
@@ -231,6 +252,14 @@ export default function VitalLogging() {
               history is shown below.
             </p>
           </div>
+          <AISummaryButton
+            onClick={() => setShowAIModal(true)}
+            disabled={
+              (!last7BpReadings || last7BpReadings.length === 0) &&
+              (!last7SugarReadings ||
+                Object.keys(last7SugarReadings).length === 0)
+            }
+          />
         </div>
 
         {/* Logging forms */}
@@ -264,351 +293,54 @@ export default function VitalLogging() {
 
         <div className="card border-0 shadow-sm">
           <div className="card-body p-4">
-            <h3>Last 7 BP readings</h3>
+            <div className="d-flex align-items-center mb-4">
+              <div
+                className="bg-primary bg-opacity-10 p-2 rounded-3 me-3"
+                style={{ color: "#0d6efd" }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </div>
+              <h4 className="fw-bold mb-0" style={{ color: "#2d3748" }}>
+                Last 7 BP Readings
+              </h4>
+            </div>
+
             {last7BpReadings && last7BpReadings.length ? (
-              <table style={{ width: "100%", borderCollapse: "collapse" }}>
-                <thead>
-                  <tr>
-                    <th
-                      style={{
-                        textAlign: "left",
-                        borderBottom: "1px solid #ddd",
-                      }}
-                    >
-                      Date
-                    </th>
-                    <th
-                      style={{
-                        textAlign: "left",
-                        borderBottom: "1px solid #ddd",
-                      }}
-                    >
-                      Systolic
-                    </th>
-                    <th
-                      style={{
-                        textAlign: "left",
-                        borderBottom: "1px solid #ddd",
-                      }}
-                    >
-                      Diastolic
-                    </th>
-                    <th
-                      style={{
-                        textAlign: "left",
-                        borderBottom: "1px solid #ddd",
-                      }}
-                    >
-                      Range
-                    </th>
-                    <th
-                      style={{
-                        textAlign: "left",
-                        borderBottom: "1px solid #ddd",
-                      }}
-                    >
-                      Status
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {last7BpReadings.map((r) => {
-                    const cls = classifyBP(r.systolic, r.diastolic);
-                    return (
-                      <tr key={r._id}>
-                        <td
-                          style={{
-                            padding: "8px 4px",
-                            borderBottom: "1px solid #f0f0f0",
-                          }}
-                        >
-                          {formatDate(r.recordedAt)}
-                        </td>
-                        <td
-                          style={{
-                            padding: "8px 4px",
-                            borderBottom: "1px solid #f0f0f0",
-                          }}
-                        >
-                          {r.systolic}
-                        </td>
-                        <td
-                          style={{
-                            padding: "8px 4px",
-                            borderBottom: "1px solid #f0f0f0",
-                          }}
-                        >
-                          {r.diastolic}
-                        </td>
-                        <td
-                          style={{
-                            padding: "8px 4px",
-                            borderBottom: "1px solid #f0f0f0",
-                          }}
-                        >
-                          {cls.range}
-                        </td>
-                        <td
-                          style={{
-                            padding: "8px 4px",
-                            borderBottom: "1px solid #f0f0f0",
-                            ...statusStyle(cls.status),
-                          }}
-                        >
-                          {cls.status}
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            ) : (
-              <p>No BP readings</p>
-            )}
-
-            <h3 style={{ marginTop: 24 }}>Last 7 Sugar readings</h3>
-            {last7SugarReadings ? (
-              <div>
-                <h4>Fasting</h4>
-                <table style={{ width: "100%", borderCollapse: "collapse" }}>
-                  <thead>
+              <div className="table-responsive">
+                <table className="table table-hover align-middle border-0">
+                  <thead className="table-light">
                     <tr>
-                      <th
-                        style={{
-                          textAlign: "left",
-                          borderBottom: "1px solid #ddd",
-                        }}
-                      >
-                        Date
-                      </th>
-                      <th
-                        style={{
-                          textAlign: "left",
-                          borderBottom: "1px solid #ddd",
-                        }}
-                      >
-                        Value (mg/dL)
-                      </th>
-                      <th
-                        style={{
-                          textAlign: "left",
-                          borderBottom: "1px solid #ddd",
-                        }}
-                      >
-                        Range
-                      </th>
-                      <th
-                        style={{
-                          textAlign: "left",
-                          borderBottom: "1px solid #ddd",
-                        }}
-                      >
-                        Status
-                      </th>
+                      <th className="border-0 ps-3">Date & Time</th>
+                      <th className="border-0">Systolic</th>
+                      <th className="border-0">Diastolic</th>
+                      <th className="border-0">Range</th>
+                      <th className="border-0 pe-3">Status</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    {(last7SugarReadings.fasting || []).map((r) => {
-                      const cls = classifySugar("FASTING", r.sugarValue);
+                  <tbody className="border-top-0">
+                    {last7BpReadings.map((r) => {
+                      const cls = classifyBP(r.systolic, r.diastolic);
                       return (
                         <tr key={r._id}>
-                          <td
-                            style={{
-                              padding: "8px 4px",
-                              borderBottom: "1px solid #f0f0f0",
-                            }}
-                          >
+                          <td className="ps-3 text-secondary">
                             {formatDate(r.recordedAt)}
                           </td>
-                          <td
-                            style={{
-                              padding: "8px 4px",
-                              borderBottom: "1px solid #f0f0f0",
-                            }}
-                          >
-                            {r.sugarValue}
-                          </td>
-                          <td
-                            style={{
-                              padding: "8px 4px",
-                              borderBottom: "1px solid #f0f0f0",
-                            }}
-                          >
-                            {cls.range}
-                          </td>
-                          <td
-                            style={{
-                              padding: "8px 4px",
-                              borderBottom: "1px solid #f0f0f0",
-                              ...statusStyle(cls.status),
-                            }}
-                          >
-                            {cls.status}
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-
-                <h4 style={{ marginTop: 12 }}>Post Meal</h4>
-                <table style={{ width: "100%", borderCollapse: "collapse" }}>
-                  <thead>
-                    <tr>
-                      <th
-                        style={{
-                          textAlign: "left",
-                          borderBottom: "1px solid #ddd",
-                        }}
-                      >
-                        Date
-                      </th>
-                      <th
-                        style={{
-                          textAlign: "left",
-                          borderBottom: "1px solid #ddd",
-                        }}
-                      >
-                        Value (mg/dL)
-                      </th>
-                      <th
-                        style={{
-                          textAlign: "left",
-                          borderBottom: "1px solid #ddd",
-                        }}
-                      >
-                        Range
-                      </th>
-                      <th
-                        style={{
-                          textAlign: "left",
-                          borderBottom: "1px solid #ddd",
-                        }}
-                      >
-                        Status
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {(last7SugarReadings.postMeal || []).map((r) => {
-                      const cls = classifySugar("POST_MEAL", r.sugarValue);
-                      return (
-                        <tr key={r._id}>
-                          <td
-                            style={{
-                              padding: "8px 4px",
-                              borderBottom: "1px solid #f0f0f0",
-                            }}
-                          >
-                            {formatDate(r.recordedAt)}
-                          </td>
-                          <td
-                            style={{
-                              padding: "8px 4px",
-                              borderBottom: "1px solid #f0f0f0",
-                            }}
-                          >
-                            {r.sugarValue}
-                          </td>
-                          <td
-                            style={{
-                              padding: "8px 4px",
-                              borderBottom: "1px solid #f0f0f0",
-                            }}
-                          >
-                            {cls.range}
-                          </td>
-                          <td
-                            style={{
-                              padding: "8px 4px",
-                              borderBottom: "1px solid #f0f0f0",
-                              ...statusStyle(cls.status),
-                            }}
-                          >
-                            {cls.status}
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-
-                <h4 style={{ marginTop: 12 }}>Random</h4>
-                <table style={{ width: "100%", borderCollapse: "collapse" }}>
-                  <thead>
-                    <tr>
-                      <th
-                        style={{
-                          textAlign: "left",
-                          borderBottom: "1px solid #ddd",
-                        }}
-                      >
-                        Date
-                      </th>
-                      <th
-                        style={{
-                          textAlign: "left",
-                          borderBottom: "1px solid #ddd",
-                        }}
-                      >
-                        Value (mg/dL)
-                      </th>
-                      <th
-                        style={{
-                          textAlign: "left",
-                          borderBottom: "1px solid #ddd",
-                        }}
-                      >
-                        Range
-                      </th>
-                      <th
-                        style={{
-                          textAlign: "left",
-                          borderBottom: "1px solid #ddd",
-                        }}
-                      >
-                        Status
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {(last7SugarReadings.random || []).map((r) => {
-                      const cls = classifySugar("RANDOM", r.sugarValue);
-                      return (
-                        <tr key={r._id}>
-                          <td
-                            style={{
-                              padding: "8px 4px",
-                              borderBottom: "1px solid #f0f0f0",
-                            }}
-                          >
-                            {formatDate(r.recordedAt)}
-                          </td>
-                          <td
-                            style={{
-                              padding: "8px 4px",
-                              borderBottom: "1px solid #f0f0f0",
-                            }}
-                          >
-                            {r.sugarValue}
-                          </td>
-                          <td
-                            style={{
-                              padding: "8px 4px",
-                              borderBottom: "1px solid #f0f0f0",
-                            }}
-                          >
-                            {cls.range}
-                          </td>
-                          <td
-                            style={{
-                              padding: "8px 4px",
-                              borderBottom: "1px solid #f0f0f0",
-                              ...statusStyle(cls.status),
-                            }}
-                          >
-                            {cls.status}
-                          </td>
+                          <td className="fw-semibold">{r.systolic}</td>
+                          <td className="fw-semibold">{r.diastolic}</td>
+                          <td className="text-muted small">{cls.range}</td>
+                          <td className="pe-3">{statusBadge(cls.status)}</td>
                         </tr>
                       );
                     })}
@@ -616,11 +348,113 @@ export default function VitalLogging() {
                 </table>
               </div>
             ) : (
-              <p>No sugar readings</p>
+              <div className="text-center py-4 text-muted">
+                <p className="mb-0">No blood pressure readings found.</p>
+              </div>
+            )}
+
+            <div className="d-flex align-items-center mt-5 mb-4">
+              <div
+                className="bg-danger bg-opacity-10 p-2 rounded-3 me-3"
+                style={{ color: "#dc3545" }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </div>
+              <h4 className="fw-bold mb-0" style={{ color: "#2d3748" }}>
+                Last 7 Sugar Readings
+              </h4>
+            </div>
+
+            {last7SugarReadings ? (
+              <div className="row g-4">
+                {[
+                  { key: "fasting", label: "Fasting", type: "FASTING" },
+                  { key: "postMeal", label: "Post Meal", type: "POST_MEAL" },
+                  { key: "random", label: "Random", type: "RANDOM" },
+                ].map((section) => (
+                  <div className="col-12" key={section.key}>
+                    <h6 className="fw-bold text-secondary mb-3 text-uppercase small letter-spacing-1">
+                      {section.label}
+                    </h6>
+                    <div className="table-responsive">
+                      <table className="table table-hover align-middle border-0">
+                        <thead className="table-light">
+                          <tr>
+                            <th className="border-0 ps-3">Date & Time</th>
+                            <th className="border-0">Value (mg/dL)</th>
+                            <th className="border-0">Range</th>
+                            <th className="border-0 pe-3">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody className="border-top-0">
+                          {(last7SugarReadings[section.key] || []).length >
+                          0 ? (
+                            (last7SugarReadings[section.key] || []).map((r) => {
+                              const cls = classifySugar(
+                                section.type,
+                                r.sugarValue
+                              );
+                              return (
+                                <tr key={r._id}>
+                                  <td className="ps-3 text-secondary">
+                                    {formatDate(r.recordedAt)}
+                                  </td>
+                                  <td className="fw-semibold">
+                                    {r.sugarValue}
+                                  </td>
+                                  <td className="text-muted small">
+                                    {cls.range}
+                                  </td>
+                                  <td className="pe-3">
+                                    {statusBadge(cls.status)}
+                                  </td>
+                                </tr>
+                              );
+                            })
+                          ) : (
+                            <tr>
+                              <td
+                                colSpan="4"
+                                className="text-center py-3 text-muted small"
+                              >
+                                No {section.label.toLowerCase()} readings found.
+                              </td>
+                            </tr>
+                          )}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-4 text-muted">
+                <p className="mb-0">No blood sugar readings found.</p>
+              </div>
             )}
           </div>
         </div>
       </div>
+
+      {/* AI Summary Modal */}
+      <AISummaryModal
+        isOpen={showAIModal}
+        onClose={() => setShowAIModal(false)}
+        bpReadings={last7BpReadings || []}
+        sugarReadings={last7SugarReadings || {}}
+      />
     </div>
   );
 }
