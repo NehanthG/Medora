@@ -3,6 +3,8 @@ import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { axiosInstance } from "../lib/axios";
 import { useAuthStore } from "../stores/useAuthStore";
+import AISummaryButton from "../components/AIInsights/AISummaryButton";
+import AISummaryModal from "../components/AIInsights/AISummaryModal";
 
 export default function VitalLogging() {
   const {
@@ -25,6 +27,7 @@ export default function VitalLogging() {
     sugarType: "",
     sugarValue: "",
   });
+  const [showAIModal, setShowAIModal] = useState(false);
 
   const handleBpLog = async (e) => {
     e.preventDefault();
@@ -231,6 +234,14 @@ export default function VitalLogging() {
               history is shown below.
             </p>
           </div>
+          <AISummaryButton
+            onClick={() => setShowAIModal(true)}
+            disabled={
+              (!last7BpReadings || last7BpReadings.length === 0) &&
+              (!last7SugarReadings ||
+                Object.keys(last7SugarReadings).length === 0)
+            }
+          />
         </div>
 
         {/* Logging forms */}
@@ -621,6 +632,14 @@ export default function VitalLogging() {
           </div>
         </div>
       </div>
+
+      {/* AI Summary Modal */}
+      <AISummaryModal
+        isOpen={showAIModal}
+        onClose={() => setShowAIModal(false)}
+        bpReadings={last7BpReadings || []}
+        sugarReadings={last7SugarReadings || {}}
+      />
     </div>
   );
 }
