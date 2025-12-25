@@ -19,7 +19,7 @@ export default function DoctorDashboard() {
 
   const handleLogout = () => {
     logout();
-    window.location.href = "/doctor/login";
+    navigate("/single-login");
   };
 
   const fetchAppointments = async () => {

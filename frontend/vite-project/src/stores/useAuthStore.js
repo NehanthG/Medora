@@ -123,7 +123,7 @@ export const useAuthStore = create((set) => ({
 
         await sendSms({
           phone: `+91${authUser.phoneNumber}`,
-          message: `🏥 APPOINTMENT CONFIRMED - VitalsHub
+          message: `🏥 APPOINTMENT CONFIRMED - Medora
 
 ✅ Your appointment has been successfully booked!
 
@@ -138,7 +138,7 @@ Password: ${zoomPassword}
 
 📞 For any queries, contact our support team.
 
-Thank you for choosing VitalsHub! `,
+Thank you for choosing Medora! `,
         });
       }
 

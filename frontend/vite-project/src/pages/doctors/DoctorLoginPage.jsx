@@ -59,10 +59,21 @@ export default function DoctorLoginPage() {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center min-vh-100" style={{ background: "#f6f8fb" }}>
-      <div className="card shadow-lg border-0" style={{ maxWidth: "380px", width: "100%", borderRadius: "18px" }}>
+    <div
+      className="d-flex justify-content-center align-items-center min-vh-100"
+      style={{ background: "#f6f8fb" }}
+    >
+      <div
+        className="card shadow-lg border-0"
+        style={{ maxWidth: "380px", width: "100%", borderRadius: "18px" }}
+      >
         <div className="card-body p-4">
-          <h2 className="mb-4 text-center fw-bold" style={{ letterSpacing: "1px" }}>{t('login.doctorLogin') || 'Doctor Login'}</h2>
+          <h2
+            className="mb-4 text-center fw-bold"
+            style={{ letterSpacing: "1px" }}
+          >
+            {"Doctor Login"}
+          </h2>
           {error && (
             <div className="alert alert-danger" role="alert">
               {error}
@@ -73,20 +84,24 @@ export default function DoctorLoginPage() {
               icon={Mail}
               type="email"
               id="email"
-              label={t('login.email') || 'Email'}
-              placeholder={t('login.email') || 'Enter your email'}
+              label={t("login.email") || "Email"}
+              placeholder={t("login.email") || "Enter your email"}
               value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
               autoComplete="username"
             />
             <InputField
               icon={Lock}
               type="password"
               id="password"
-              label={t('login.password') || 'Password'}
-              placeholder={t('login.password') || 'Enter your password'}
+              label={t("login.password") || "Password"}
+              placeholder={t("login.password") || "Enter your password"}
               value={formData.password}
-              onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, password: e.target.value })
+              }
               autoComplete="current-password"
             />
 
@@ -96,14 +111,19 @@ export default function DoctorLoginPage() {
               disabled={isLoggingIn}
               style={{ transition: "background 0.2s" }}
             >
-              {isLoggingIn ? (t('login.loggingIn') || 'Logging in...') : (t('login.login') || 'Login')}
+              {isLoggingIn
+                ? t("login.loggingIn") || "Logging in..."
+                : t("login.login") || "Login"}
             </button>
 
             <div className="mt-3 text-center">
               <p className="mb-0 text-secondary">
-                {t('login.noAccount') || 'Don\'t have an account?'} 
-                <Link to="/doctor/register" className="fw-bold text-primary text-decoration-none ms-1">
-                  {t('login.signUp') || 'Sign Up'}
+                {t("login.noAccount") || "Don't have an account?"}
+                <Link
+                  to="/doctor/register"
+                  className="fw-bold text-primary text-decoration-none ms-1"
+                >
+                  {t("login.signUp") || "Sign Up"}
                 </Link>
               </p>
             </div>

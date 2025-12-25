@@ -1,6 +1,6 @@
 {
-  "brand": "VitalsHub",
-  "brandPharmacy": "VitalsHub - Pharmacy",
+  "brand": "Medora",
+  "brandPharmacy": "Medora - Pharmacy",
   "loading": "Loading...",
   "nav": {
     "home": "Home",
@@ -294,8 +294,7 @@
       "bookAppointment": "Book Appointment"
     },
     "summary": "Found {{count}} doctor{{plural}} at {{hospital}}"
-  }
-  ,
+  },
   "adminLogin": {
     "title": "Admin Login",
     "subtitle": "Sign in to your hospital admin account",
@@ -410,8 +409,7 @@
       "success": "Pharmacy Registered Successfully",
       "failed": "Registration Failed"
     }
-  }
-  ,
+  },
   "adminDashboard": {
     "welcome": "Welcome back, Admin!",
     "hospitalId": "Hospital ID: {{id}}",
@@ -435,8 +433,7 @@
         "subtitle": "Configure hospital and system settings."
       }
     }
-  }
-  ,
+  },
   "pharmacyDashboard": {
     "loading": "Loading pharmacy data...",
     "welcome": "Welcome, {{name}}",
@@ -461,8 +458,7 @@
       "stock": "Stock"
     },
     "units": "units"
-  }
-  ,
+  },
   "adminDoctors": {
     "common": {
       "email": "Email",
@@ -562,8 +558,7 @@
         "error": "An error occurred while updating the doctor"
       }
     }
-  }
-  ,
+  },
   "adminAppointments": {
     "title": "All Appointments",
     "subtitle": "View and manage patient appointments across your hospital",

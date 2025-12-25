@@ -1,6 +1,6 @@
 {
-  "brand": "VitalsHub",
-  "brandPharmacy": "VitalsHub - Pharmacy",
+  "brand": "Medora",
+  "brandPharmacy": "Medora - Pharmacy",
   "loading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...",
   "nav": {
     "home": "ਮੁੱਖ ਪੰਨਾ",
@@ -401,8 +401,7 @@
       "success": "ਫਾਰਮੇਸੀ ਸਫਲਤਾਪੂਰਵਕ ਰਜਿਸਟਰ ਕੀਤੀ ਗਈ",
       "failed": "ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਅਸਫਲ"
     }
-  }
-  ,
+  },
   "adminDashboard": {
     "welcome": "ਵਾਪਸੀ 'ਤੇ ਸੁਆਗਤ ਹੈ, ਐਡਮਿਨ!",
     "hospitalId": "ਹਸਪਤਾਲ ਆਈਡੀ: {{id}}",
@@ -451,8 +450,7 @@
       "stock": "ਸਟਾਕ"
     },
     "units": "ਯੂਨਿਟ"
-  }
-  ,
+  },
   "adminDoctors": {
     "common": {
       "email": "ਈਮੇਲ",
@@ -552,8 +550,7 @@
         "error": "ਡਾਕਟਰ ਨੂੰ ਅੱਪਡੇਟ ਕਰਦੇ ਸਮੇਂ ਗਲਤੀ ਆਈ"
       }
     }
-  }
-  ,
+  },
   "adminAppointments": {
     "title": "ਸਾਰੀਆਂ ਮਿਲਣੀਆਂ",
     "subtitle": "ਆਪਣੇ ਹਸਪਤਾਲ ਵਿੱਚ ਮਰੀਜ਼ਾਂ ਦੀਆਂ ਮਿਲਣੀਆਂ ਵੇਖੋ ਅਤੇ ਪ੍ਰਬੰਧ ਕਰੋ",

@@ -11,8 +11,8 @@ export default function HomePage() {
   const firstName = authUser?.fullName ? authUser.fullName.split(" ")[0] : "";
   // Localized sample dates for demo content
   const locale = i18n.language;
-  const upcomingAppointmentDate = new Date("2024-07-15");
-  const recentRecordDate = new Date("2024-06-20");
+  const upcomingAppointmentDate = new Date("2025-12-26");
+  const recentRecordDate = new Date("2025-12-26");
   // const monthYearLocalized = new Date('2024-06-01').toLocaleDateString(locale, { month: 'long', year: 'numeric' });
 
   return (
@@ -159,7 +159,17 @@ export default function HomePage() {
           <h5 className="fw-bold mb-3" style={{ color: "#2d3748" }}>
             {t("homepage.recentActivity")}
           </h5>
-          <div className="card border-0 shadow-sm mb-3">
+          <Link
+            to="/appointments"
+            className="card border-0 shadow-sm mb-3 text-decoration-none"
+            style={{ transition: "transform 0.2s ease" }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.transform = "translateY(-2px)")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.transform = "translateY(0)")
+            }
+          >
             <div className="card-body p-4">
               <div className="d-flex align-items-center justify-content-between">
                 <div className="d-flex align-items-center">
@@ -182,7 +192,7 @@ export default function HomePage() {
                       style={{ fontSize: "0.95rem" }}
                     >
                       {t("homepage.appointmentWith", {
-                        doctor: "Dr. Emily Carter",
+                        doctor: "Dr. Emmanuel",
                       })}
                     </p>
                   </div>
@@ -199,9 +209,19 @@ export default function HomePage() {
                 </span>
               </div>
             </div>
-          </div>
+          </Link>
 
-          <div className="card border-0 shadow-sm">
+          <Link
+            to="/medical-records"
+            className="card border-0 shadow-sm text-decoration-none"
+            style={{ transition: "transform 0.2s ease" }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.transform = "translateY(-2px)")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.transform = "translateY(0)")
+            }
+          >
             <div className="card-body p-4">
               <div className="d-flex align-items-center justify-content-between">
                 <div className="d-flex align-items-center">
@@ -232,19 +252,19 @@ export default function HomePage() {
                     </p>
                   </div>
                 </div>
+                <span
+                  className="badge text-secondary"
+                  style={{ background: "#f1f5f9" }}
+                >
+                  {recentRecordDate.toLocaleDateString(locale, {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </span>
               </div>
-              <span
-                className="badge text-secondary"
-                style={{ background: "#f1f5f9" }}
-              >
-                {recentRecordDate.toLocaleDateString(locale, {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </span>
             </div>
-          </div>
+          </Link>
         </div>
         <div className="text-end d-flex justify-content-end gap-2">
           <Link

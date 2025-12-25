@@ -1,6 +1,6 @@
 {
-  "brand": "VitalsHub",
-  "brandPharmacy": "VitalsHub - Pharmacy",
+  "brand": "Medora",
+  "brandPharmacy": "Medora - Pharmacy",
   "loading": "లోడ్ అవుతోంది...",
   "nav": {
     "home": "హోమ్",
@@ -401,8 +401,7 @@
       "success": "ఫార్మసీ విజయవంతంగా నమోదు చేయబడింది",
       "failed": "నమోదు విఫలమైంది"
     }
-  }
-  ,
+  },
   "adminDashboard": {
     "welcome": "తిరిగి స్వాగతం, అడ్మిన్!",
     "hospitalId": "ఆసుపత్రి ఐడి: {{id}}",
@@ -451,8 +450,7 @@
       "stock": "స్టాక్"
     },
     "units": "యూనిట్లు"
-  }
-  ,
+  },
   "adminDoctors": {
     "common": {
       "email": "ఈమెయిల్",
@@ -552,8 +550,7 @@
         "error": "డాక్టర్‌ను నవీకరిస్తున్నప్పుడు లోపం సంభవించింది"
       }
     }
-  }
-  ,
+  },
   "adminAppointments": {
     "title": "అన్ని అపాయింట్‌మెంట్‌లు",
     "subtitle": "మీ ఆసుపత్రి అంతటా రోగుల అపాయింట్‌మెంట్‌లను చూడండి మరియు నిర్వహించండి",
