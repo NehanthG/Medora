@@ -146,30 +146,35 @@ export default function CreateAppointment() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
+  e.preventDefault();
+  setError("");
 
-    if (!validateForm()) return;
+  if (!validateForm()) return;
 
-    try {
-      // Include doctor name in the appointment data
-      const appointmentData = {
-        ...formData,
-        doctorName: doctorName,
-      };
+  try {
+    const appointmentData = {
+      ...formData,
+      doctorName: doctorName,
+    };
 
-      const result = await createAppointment(appointmentData);
+    const result = await createAppointment(appointmentData);
 
-      if (result?.success) {
-        setShowToast(true);
-      } else {
-        setError("Failed to create appointment. Please try again.");
-      }
-    } catch (err) {
-      console.error("Appointment creation error:", err);
-      setError("An unexpected error occurred. Please try again.");
+    if (result?.success) {
+      setShowToast(true);
+
+  // ⏳ Give user feedback, then redirect to appointments list
+  setTimeout(() => {
+    navigate("/appointments"); // 👈 patient's appointment list
+  }, 1500);
+    } else {
+      setError("Failed to create appointment. Please try again.");
     }
-  };
+  } catch (err) {
+    console.error("Appointment creation error:", err);
+    setError("An unexpected error occurred. Please try again.");
+  }
+};
+
 
   const handleInputChange = (field) => (e) => {
     setFormData((prev) => ({ ...prev, [field]: e.target.value }));

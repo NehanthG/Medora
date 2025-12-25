@@ -145,6 +145,10 @@
         "title": "Patient Login",
         "description": "Access your medical records and book appointments"
       },
+      "doctor": {
+        "title": "Doctor Login",
+        "description": "Access your doctor dashboard and manage appointments"
+      },
       "admin": {
         "title": "Admin Login",
         "description": "Manage hospitals, doctors and system operations"

@@ -1,6 +1,6 @@
 
 import { useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
@@ -8,6 +8,7 @@ import SingleLogin from "./pages/SingleLogin";
 import UserLoginWrapper from "./components/UserLoginWrapper";
 import AdminLoginWrapper from "./components/AdminLoginWrapper";
 import PharmacyLoginWrapper from "./components/PharmacyLoginWrapper";
+import DoctorLoginWrapper from "./components/DoctorLoginWrapper";
 import { Toaster } from "react-hot-toast";
 import MyProfile from "./pages/MyProfile";
 import Navbar from "./components/Navbar";
@@ -26,6 +27,10 @@ import AllPharmacies from "./pages/AllPharmacies";
 import Pharmacy from "./pages/Pharmacy";
 import PharmacyLogin from "./pages/pharmaciesAdmin/pharmacyLogin";
 import AdminNavbar from "./components/AdminNavbar";
+import DoctorProtectedRoute from "./components/DoctorProtectedRoute";
+import DoctorDashboard from "./pages/doctors/DoctorDashboard";
+import DoctorLoginPage from "./pages/doctors/DoctorLoginPage";
+import DoctorSignupPage from "./pages/doctors/DoctorSignupPage";
 
 import AllHospitals from "./pages/AllHospitals";
 import AllDoctors from "./pages/AllDoctors";
@@ -36,6 +41,7 @@ import PharmacyDashboard from "./pages/pharmaciesAdmin/PharmacyDashboard";
 import PharmacyAddMedicine from "./pages/pharmaciesAdmin/PharmacyAddMedicine";
 import PharmacyEditMed from "./pages/pharmaciesAdmin/PharmacyEditMed";
 import AllAppointments from "./pages/AllAppointments";
+import AppointmentPage from "./pages/AppointmentPage";
 import { useTranslation } from 'react-i18next';
 
 function App() {
@@ -43,40 +49,45 @@ function App() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    // Only check auth for non-admin routes
-    if (!window.location.pathname.startsWith("/admin")) {
-      checkAuth();
-    }
-  }, [checkAuth]);
+  checkAuth();
+}, [checkAuth]);
 
-  if (
-    isCheckingAuth &&
-    !authUser &&
-    !window.location.pathname.startsWith("/admin")
-  ) {
-    return <h1>{t('loading')}</h1>;
-  }
+
+  if (isCheckingAuth) {
+  return <h1>{t("loading")}</h1>;
+}
+
+
+  // Determine if we should show the main navbar
+  const showNavbar = authUser && 
+    !window.location.pathname.startsWith("/admin") &&
+    !window.location.pathname.startsWith("/pharmacy") &&
+    !window.location.pathname.startsWith("/doctor");
 
   return (
     <div>
-      {authUser &&
-        !window.location.pathname.startsWith("/admin") &&
-        !window.location.pathname.startsWith("/pharmacy") && <Navbar />}
+      {showNavbar && <Navbar />}
       <Routes>
-        <Route path="/" element={authUser ? <HomePage /> : <SingleLogin />} />
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/login" element={<LoginPage />} />
-
-        {/* Single Login Layout with Nested Routes */}
+        <Route path="/" element={<SingleLogin />} />
         <Route path="/single-login" element={<SingleLogin />}>
           <Route index element={<UserLoginWrapper />} />
           <Route path="user" element={<UserLoginWrapper />} />
           <Route path="admin" element={<AdminLoginWrapper />} />
           <Route path="pharmacy" element={<PharmacyLoginWrapper />} />
+          <Route path="doctor" element={<DoctorLoginWrapper />} />
         </Route>
+        
+        {/* Public routes */}
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/login" element={<LoginPage />} />
 
         <Route path="/home" element={<HomePage />} />
         <Route path="/myprofile" element={<MyProfile />} />
+        <Route
+          path="/appointments/:appointmentId"
+          element={<AppointmentPage />}
+        />
+
         <Route path="/addDocs" element={<AddDocs />} />
         <Route path="/medical-records" element={<MedicalRecords />} />
         <Route path="/chatbot" element={<RagChatbot />} />
@@ -111,6 +122,23 @@ function App() {
           path="/pharmacy/edit-medicine/:id"
           element={<PharmacyEditMed />}
         />
+
+        {/* Doctor Routes */}
+        <Route path="/doctor">
+          {/* Public doctor routes */}
+          <Route path="login" element={<DoctorLoginPage />} />
+          <Route path="register" element={<DoctorSignupPage />} />
+          
+          {/* Protected doctor routes */}
+          <Route element={<DoctorProtectedRoute />}>
+            <Route index element={<Navigate to="dashboard" replace />} />
+            <Route path="dashboard" element={<DoctorDashboard />} />
+            {/* Add more protected doctor routes here */}
+          </Route>
+          
+          {/* Catch-all for unknown doctor routes */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
       </Routes>
       <Toaster />
     </div>

@@ -1,17 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useNavigate, Outlet, useLocation } from "react-router-dom";
-import { User, Shield, Pill } from "lucide-react";
+import { User, Shield, Pill, Stethoscope } from "lucide-react";
 import { useTranslation } from 'react-i18next';
+import { useAuthStore } from '../stores/useAuthStore';
 
 export default function SingleLogin() {
   const navigate = useNavigate();
   const location = useLocation();
   const { t, i18n } = useTranslation();
+  const { authUser } = useAuthStore();
+
+  // Redirect to home if user is already authenticated
+  useEffect(() => {
+    if (authUser) {
+      navigate('/home');
+    }
+  }, [authUser, navigate]);
+
+  // Show loading state while checking auth
+  if (authUser) {
+    return <div>Loading...</div>;
+  }
 
   // Extract selected login type from URL
   const getSelectedLoginType = () => {
     if (location.pathname.includes("admin")) return "admin";
     if (location.pathname.includes("pharmacy")) return "pharmacy";
+    if (location.pathname.includes("doctor")) return "doctor";
     return "user";
   };
 
@@ -25,6 +40,14 @@ export default function SingleLogin() {
       icon: User,
       bgColor: "#4f46e5",
       redirectPath: "/single-login/user",
+    },
+    {
+      id: "doctor",
+      title: t('singleLogin.types.doctor.title', 'Doctor'),
+      description: t('singleLogin.types.doctor.description', 'Access your doctor dashboard'),
+      icon: Stethoscope,
+      bgColor: "#2563eb",
+      redirectPath: "/single-login/doctor",
     },
     {
       id: "admin",

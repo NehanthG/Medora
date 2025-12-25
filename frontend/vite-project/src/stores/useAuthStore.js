@@ -1,7 +1,6 @@
-import {create} from "zustand"
-import toast from "react-hot-toast"
-import {axiosInstance} from "../lib/axios"
-
+import { create } from "zustand";
+import toast from "react-hot-toast";
+import { axiosInstance } from "../lib/axios";
 
 export const useAuthStore = create((set) => ({
   authUser: null,
@@ -19,15 +18,14 @@ export const useAuthStore = create((set) => ({
       const res = await axiosInstance.get("/user/check", {
         withCredentials: true,
       });
-      console.log("Login response:", res.data);
       set({ authUser: res.data });
     } catch (error) {
-      console.log("Error in checkAuth", error.message);
       set({ authUser: null });
     } finally {
-      set({ isCheckingAuth: false });
+      set({ isCheckingAuth: false }); // ✅ THIS IS ENOUGH
     }
   },
+
   signup: async (data) => {
     set({ isSigningUp: true });
     try {
@@ -36,12 +34,12 @@ export const useAuthStore = create((set) => ({
       toast.success("User Created Successfully");
       return { success: true };
     } catch (error) {
-      console.log("Error in signup", error.message);
       toast.error(error.response.data.message);
     } finally {
       set({ isSigningUp: false });
     }
   },
+
   login: async (data) => {
     set({ isLoggingIn: true });
     try {
@@ -50,9 +48,6 @@ export const useAuthStore = create((set) => ({
       toast.success("User Logged In Successfully");
       return { success: true };
     } catch (error) {
-      console.log("Error in login", error.message);
-      console.log("Login data sent:", data);
-      console.log("Backend response:", error.response?.data);
       toast.error(error.response?.data?.message || "Login failed");
     } finally {
       set({ isLoggingIn: false });
@@ -67,12 +62,12 @@ export const useAuthStore = create((set) => ({
       toast.success("Profile Updated Successfully");
       return { success: true };
     } catch (error) {
-      console.log("Error in updateProfile", error.message);
       toast.error(error.response.data.message);
     } finally {
       set({ isUpdatingProfile: false });
     }
   },
+
   logout: async (navigate) => {
     try {
       await axiosInstance.post("/user/logout");
@@ -80,10 +75,10 @@ export const useAuthStore = create((set) => ({
       toast.success("User Logged Out Successfully");
       navigate("/");
     } catch (error) {
-      console.log("Error in logout", error.message);
       toast.error(error.response.data.message);
     }
   },
+
   addDocs: async (data) => {
     set({ isAddingDoc: true });
     try {
@@ -91,57 +86,42 @@ export const useAuthStore = create((set) => ({
       toast.success("Document Added Successfully");
       return { success: true };
     } catch (error) {
-      console.log("Error in addDocs", error.message);
       toast.error(error.response.data.message);
     } finally {
       set({ isAddingDoc: false });
     }
   },
+
   createAppointment: async (data) => {
     set({ isLoading: true });
     try {
-      await axiosInstance.post("/appointments/create", data);
+      const res = await axiosInstance.post("/appointments/create", data);
+      const appointment = res.data.data;
+
       toast.success("Appointment Created successfully");
 
-      // Get the current state to access authUser
       const { authUser, sendSms } = useAuthStore.getState();
 
       if (authUser?.phoneNumber) {
-        // Generate random Zoom meeting ID (9 digits with dashes)
-        const generateZoomId = () => {
-          const part1 = Math.floor(Math.random() * 900) + 100; // 3 digits
-          const part2 = Math.floor(Math.random() * 900) + 100; // 3 digits
-          const part3 = Math.floor(Math.random() * 900) + 100; // 3 digits
-          return `${part1}-${part2}-${part3}`;
-        };
-
-        const zoomId = generateZoomId();
-        const zoomPassword = "VH2024"; // Static password
+        const zoomId = `${Math.floor(Math.random() * 900 + 100)}-${Math.floor(
+          Math.random() * 900 + 100
+        )}-${Math.floor(Math.random() * 900 + 100)}`;
 
         await sendSms({
           phone: `+91${authUser.phoneNumber}`,
           message: `🏥 APPOINTMENT CONFIRMED - VitalsHub
 
-✅ Your appointment has been successfully booked!
+Patient: ${authUser.fullName}
+Doctor: ${data.doctorName}
+Date & Time: ${data.appointmentTime}
 
-  Patient: ${authUser.fullName}
-  Doctor: ${data.doctorName || "Dr. [Name]"}
-  Date & Time: ${data.appointmentTime}
-  Appointment Description: ${data.description}
-
-🎥 TELEHEALTH DETAILS:
-Zoom Meeting ID: ${zoomId}
-Password: ${zoomPassword}
-
-📞 For any queries, contact our support team.
-
-Thank you for choosing VitalsHub! `,
+Meeting ID: ${zoomId}
+Password: VH2024`,
         });
       }
 
-      return { success: true };
+      return { success: true, appointment };
     } catch (error) {
-      console.log("Error in creating appointment", error.message);
       toast.error(
         error.response?.data?.message || "Failed to create appointment"
       );
@@ -153,15 +133,11 @@ Thank you for choosing VitalsHub! `,
 
   sendSms: async (data) => {
     set({ isLoading: true });
-    console.log("Sending SMS with data:", data);
     try {
-      const response = await axiosInstance.post("/send-sms", data);
-      console.log("SMS response:", response.data);
+      await axiosInstance.post("/send-sms", data);
       toast.success(`SMS sent successfully to ${data.phone}`);
       return { success: true };
     } catch (error) {
-      console.error("Error in sending SMS:", error);
-      console.error("Error response:", error.response?.data);
       toast.error(error.response?.data?.error || "Failed to send SMS");
       return { success: false };
     } finally {
@@ -176,7 +152,6 @@ Thank you for choosing VitalsHub! `,
       set({ allHospitals: res.data.data });
       return { success: true };
     } catch (error) {
-      console.log("Error in getting all hospitals", error.message);
       toast.error(error.response?.data?.message || "Failed to fetch hospitals");
       return { success: false };
     } finally {
@@ -190,12 +165,9 @@ Thank you for choosing VitalsHub! `,
       const res = await axiosInstance.get(
         `/admin/doctors/hospital/${hospitalId}`
       );
-      console.log(res.data);
-
       set({ hospitalDoctors: res.data.data || res.data });
-      return { success: true, data: res.data.data || res.data };
+      return { success: true };
     } catch (error) {
-      console.log("Error in getting doctors by hospital", error.message);
       toast.error(error.response?.data?.message || "Failed to fetch doctors");
       set({ hospitalDoctors: [] });
       return { success: false };
