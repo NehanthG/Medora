@@ -148,7 +148,7 @@ flowchart LR
   B -->|responses| F
   F -->|render| U
 
-
+```
 1. A person opens the frontend and interacts with the UI (searches, requests an appointment, or asks a question).
 2. The frontend calls the backend API endpoints (routes defined under `backend/routes/`).
 3. The backend forwards the request to the appropriate controller. That controller may:
