@@ -121,6 +121,11 @@ Quick pre-check list
 ---
 ### Architecture Flow (Mermaid)
 
+
+---
+
+### 📌 Final correct block (for your reference)
+
 ```mermaid
 flowchart LR
   U["User (Browser / Mobile)"]
@@ -145,6 +150,7 @@ flowchart LR
   CH -->|LLM calls| AI
   B -->|responses| F
   F -->|render| U
+
 
 Plain-English walkthrough (step-by-step)
 
