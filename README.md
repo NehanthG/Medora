@@ -119,23 +119,32 @@ Quick pre-check list
 - Frontend opens successfully in the browser
 
 ---
-
 ### Architecture Flow (Mermaid)
 
 ```mermaid
 flowchart LR
-  U[User (Browser / Mobile)] -->|UI actions| F[Frontend (React + Vite)]
-  F -->|HTTP requests| B[Backend (Node + Express)]
-  B -->|routes -> controllers| C[Controller layer]
-  C -->|read/write| DB[(MongoDB via Mongoose)]
-  C -->|file uploads| CL[Cloudinary]
-  C -->|send SMS| TW[Twilio]
-  C -->|invoke chat| CH[Chatbot (FastAPI, uvicorn)]
-  CH -->|vector lookups| VDB[(Vector indexes in MongoDB)]
-  CH -->|LLM calls| AI[(AI providers: OpenAI, GROQ, Gemini...)]
+  U["User (Browser / Mobile)"]
+  F["Frontend (React + Vite)"]
+  B["Backend (Node + Express)"]
+  C["Controller Layer"]
+  DB[("MongoDB via Mongoose")]
+  CL["Cloudinary"]
+  TW["Twilio"]
+  CH["Chatbot (FastAPI + Uvicorn)"]
+  VDB[("Vector Indexes (MongoDB)")]
+  AI["AI Providers (OpenAI / Groq / Gemini)"]
+
+  U -->|UI actions| F
+  F -->|HTTP requests| B
+  B -->|routes| C
+  C -->|read/write| DB
+  C -->|file uploads| CL
+  C -->|send SMS| TW
+  C -->|invoke chat| CH
+  CH -->|vector lookups| VDB
+  CH -->|LLM calls| AI
   B -->|responses| F
   F -->|render| U
-```
 
 Plain-English walkthrough (step-by-step)
 
