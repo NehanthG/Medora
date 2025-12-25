@@ -12,6 +12,8 @@ export const useAuthStore = create((set) => ({
   isUpdatingProfile: false,
   isAddingDoc: false,
   isLoading: false,
+  last7BpReadings: null,
+  last7SugarReadings: null,
 
   checkAuth: async () => {
     try {
@@ -173,6 +175,24 @@ Password: VH2024`,
       return { success: false };
     } finally {
       set({ isLoading: false });
+    }
+  },
+
+  get7BpReadings: async (userId) => {
+    try {
+      const res = await axiosInstance.get(`/vitals/${userId}/7-day-bp`);
+      set({ last7BpReadings: res.data.data });
+    } catch (error) {
+      console.error("Error fetching 7-day BP:", error);
+    }
+  },
+
+  get7SugarReadings: async (userId) => {
+    try {
+      const res = await axiosInstance.get(`/vitals/${userId}/7-day-sugar`);
+      set({ last7SugarReadings: res.data.data });
+    } catch (error) {
+      console.error("Error fetching 7-day sugar:", error);
     }
   },
 }));
