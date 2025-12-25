@@ -152,6 +152,7 @@ flowchart LR
   F -->|render| U
 
 
+
 Plain-English walkthrough (step-by-step)
 
 1. A person opens the frontend and interacts with the UI (searches, requests an appointment, or asks a question).
