@@ -23,6 +23,7 @@ export default function Pharmacy() {
                 setPharmacy(response.data.data);
                 setMedicines(response.data.data.medicines);
             } catch (error) {
+                console.log(error);
                 setError(t('pharmacy.errors.loadFailed'));
             } finally {
                 setIsLoading(false);

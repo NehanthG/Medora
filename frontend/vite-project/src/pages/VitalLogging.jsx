@@ -45,7 +45,7 @@ export default function VitalLogging() {
     }
 
     try {
-      const res = await axiosInstance.post(`vitals/${authUser._id}/log`, {
+      const res = await axiosInstance.post(`/vitals/${authUser._id}/log`, {
         type: "BP",
         systolic: bpData.systolic,
         diastolic: bpData.diastolic,
@@ -77,7 +77,7 @@ export default function VitalLogging() {
     }
 
     try {
-      const res = await axiosInstance.post(`vitals/${authUser._id}/log`, {
+      const res = await axiosInstance.post(`/vitals/${authUser._id}/log`, {
         type: "Sugar",
         sugarType: sugarData.sugarType,
         sugarValue: sugarData.sugarValue,
