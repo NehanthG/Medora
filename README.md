@@ -113,7 +113,14 @@ Quick pre-check list
 
 ## Visual flowchart — how Medora works (human-friendly)
 
-Below are three ways to understand how the pieces communicate: a Mermaid diagram (renders on GitHub and many editors), a plain-English walkthrough, and an ASCII fallback.
+**System health checks**
+- Chatbot logs show no fatal errors and ideally a MongoDB ping
+- Node backend logs show Express is running
+- Frontend opens successfully in the browser
+
+---
+
+### Architecture Flow (Mermaid)
 
 ```mermaid
 flowchart LR
