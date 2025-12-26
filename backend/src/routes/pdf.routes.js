@@ -6,21 +6,29 @@ const router = express.Router();
 
 router.post("/upload", upload.single("file"), async (req, res) => {
   try {
-    if (!req.file) return res.status(400).send("No file uploaded");
+    console.log("Upload request received");
+    console.log("req.file:", req.file);
+    console.log("req.body:", req.body);
+
+    if (!req.file) {
+      return res
+        .status(400)
+        .json({ success: false, message: "No file uploaded" });
+    }
 
     const title = req.body.title;
     const fileData = req.file.buffer;
     const contentType = req.file.mimetype;
 
-    const doc=await pdfDetails.create({
+    const doc = await pdfDetails.create({
       title,
-      pdf: { data: fileData, contentType }
+      pdf: { data: fileData, contentType },
     });
 
-    res.status(200).json({success:true,doc});
+    res.status(200).json({ success: true, doc });
   } catch (error) {
-    console.error(error.message);
-    res.status(500).send("Error uploading file");
+    console.error("Upload error:", error.message);
+    res.status(500).json({ success: false, message: "Error uploading file" });
   }
 });
 

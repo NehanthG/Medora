@@ -32,6 +32,12 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID?.trim();
 const authToken = process.env.TWILIO_AUTH_TOKEN?.trim();
 const twilioPhone = process.env.TWILIO_PHONE?.trim();
 
+console.log("Twilio Config Check:");
+console.log("- SID present:", !!accountSid);
+console.log("- Token present:", !!authToken);
+console.log("- Phone present:", !!twilioPhone);
+if (accountSid) console.log("- SID starts with:", accountSid.substring(0, 5));
+
 /* -------------------- Middleware -------------------- */
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ limit: "10mb", extended: true }));

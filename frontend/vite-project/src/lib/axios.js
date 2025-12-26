@@ -3,9 +3,6 @@ import axios from "axios"
 // Create axios instance with default config
 export const axiosInstance = axios.create({
   baseURL: "http://localhost:5002/api",
-  headers: {
-    'Content-Type': 'application/json',
-  },
   withCredentials: true, // This is needed for cookies
 });
 

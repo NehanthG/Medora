@@ -95,7 +95,7 @@ export const useAuthStore = create((set) => ({
       return { success: true };
     } catch (error) {
       console.log("Error in addDocs", error.message);
-      toast.error(error.response.data.message);
+      toast.error(error.response?.data?.message || "Failed to upload document");
     } finally {
       set({ isAddingDoc: false });
     }
